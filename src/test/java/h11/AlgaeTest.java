@@ -1,8 +1,10 @@
 package h11;
 
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,20 +12,36 @@ class AlgaeTest {
 
     @Test
     void testAlgaeGeneratesFibs() {
-        var fibs = List.of(
-                1, 2, 3, 5, 8, 13, 21, 34, 55,
-                89, 144, 233, 377, 610, 987, 1597, 2584,
-                4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393
-        );
+        var fibs = getFibs(20);
 
         var algae = new Algae();
-        var generator = new LSystemGeneratorImpl<>(algae);
+        var grower = LSystemGrower.of(algae);
 
-        var actual = generator.generate()
+        var actual = grower.grow()
                 .limit(fibs.size())
                 .map(List::size)
                 .toList();
 
         assertIterableEquals(fibs, actual);
+    }
+
+    @NotNull
+    private static List<Integer> getFibs(int numberOfFibs) {
+        return Stream
+            .iterate(new FibPair(), FibPair::next)
+            .map(FibPair::a)
+            .limit(numberOfFibs)
+            .toList();
+    }
+
+    private record FibPair(int a, int b) {
+
+        FibPair() {
+            this(1, 2);
+        }
+
+        public FibPair next() {
+            return new FibPair(b, a+b);
+        }
     }
 }
