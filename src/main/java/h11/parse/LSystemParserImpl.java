@@ -1,10 +1,10 @@
-package h11;
+package h11.parse;
 
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-public class LSystemParserImpl implements LSystemParser {
+class LSystemParserImpl implements LSystemParser {
 
     @Override
     public List<Projection> parse(Stream<String> lines) {
@@ -26,6 +26,7 @@ public class LSystemParserImpl implements LSystemParser {
     }
 
     private String removeComments(String line) {
-        return line.split("#")[0].trim();
+        var parts = line.split("#");
+        return parts.length == 0 ? "" : parts[0].trim();
     }
 }
