@@ -1,10 +1,7 @@
 package h11.fibs;
 
-import h11.Algae;
-import h11.LSystemGrower;
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
@@ -12,22 +9,18 @@ abstract class AlgaeTest {
 
     private final FibonacciGenerator fibonacciGenerator;
 
-    private final LSystemGrower<Algae.Variable> algaeGrower;
+    private final FibonacciGenerator algaeFibonacciGenerator;
 
-    protected AlgaeTest(FibonacciGenerator fibonacciGenerator, LSystemGrower<Algae.Variable> algaeGrower) {
+    protected AlgaeTest(FibonacciGenerator fibonacciGenerator, FibonacciGenerator algaeFibonacciGenerator) {
         this.fibonacciGenerator = fibonacciGenerator;
-        this.algaeGrower = algaeGrower;
+        this.algaeFibonacciGenerator = algaeFibonacciGenerator;
     }
 
-    @Test
-    void testAlgaeGeneratesFibs() {
-        var fibs = fibonacciGenerator.generate(20);
-
-        var actual = algaeGrower.grow()
-                .limit(fibs.size())
-                .map(List::size)
-                .toList();
-
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 20, 30})
+    void testAlgaeGeneratesFibs(int numberOfFibs) {
+        var fibs = fibonacciGenerator.generate(numberOfFibs);
+        var actual = algaeFibonacciGenerator.generate(numberOfFibs);
         assertIterableEquals(fibs, actual);
     }
 }

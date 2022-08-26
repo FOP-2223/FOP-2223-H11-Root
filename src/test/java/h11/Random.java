@@ -21,7 +21,7 @@ public class Random extends java.util.Random {
 
     public String latin(int length) {
         return ints(length, 'A', 'Z' + 1)
-            .mapToObj(Character::toString)
-            .collect(Collectors.joining());
+                .mapToObj(Character::toString)
+                .collect(Collectors.joining());
     }
 }

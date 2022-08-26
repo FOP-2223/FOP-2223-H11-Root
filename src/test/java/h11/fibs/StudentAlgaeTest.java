@@ -6,6 +6,6 @@ import h11.LSystemGrower;
 public class StudentAlgaeTest extends AlgaeTest {
 
     protected StudentAlgaeTest() {
-        super(new FibonacciGeneratorImpl(), LSystemGrower.of(new Algae()));
+        super(new FibonacciGeneratorImpl(), new AlgaeFibonacciGenerator(LSystemGrower.of(new Algae())));
     }
 }
