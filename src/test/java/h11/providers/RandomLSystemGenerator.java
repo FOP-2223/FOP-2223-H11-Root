@@ -32,7 +32,8 @@ public class RandomLSystemGenerator {
     }
 
     private Projection makeProjection(String src) {
-        var dest = random.latin(random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE));
+        var size = random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE);
+        var dest = random.latin(size);
         return new Projection(src, dest);
     }
 }
