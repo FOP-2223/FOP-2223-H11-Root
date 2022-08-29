@@ -1,7 +1,5 @@
-package h11;
+package h11.parse;
 
-import h11.parse.LSystemParser;
-import h11.parse.Projection;
 import h11.providers.ProjectionsWithLinesProvider;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
