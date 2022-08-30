@@ -16,7 +16,7 @@ class LSystemParserImpl implements LSystemParser {
     }
 
     private Projection parseProjection(String line) {
-        var parts = line.split("\\s+->\\s+");
+        var parts = line.split("\\s*->\\s*");
 
         if (parts.length != 2) {
             throw new IllegalArgumentException("Line does not have the correct pattern: " + line);

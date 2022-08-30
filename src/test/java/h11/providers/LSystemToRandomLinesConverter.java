@@ -38,7 +38,7 @@ public class LSystemToRandomLinesConverter {
         var s = generateSpaces()
             + projection.source()
             + generateSpaces()
-            + " -> "
+            + "->"
             + generateSpaces()
             + projection.destination()
             + generateComment();
