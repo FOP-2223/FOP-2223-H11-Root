@@ -3,7 +3,7 @@ package h11;
 import java.util.List;
 import java.util.stream.Stream;
 
-class LSystemGrowerImpl<T> implements LSystemGrower<T> {
+public class LSystemGrowerImpl<T> implements LSystemGrower<T> {
 
     private final LSystem<T> lSystem;
 

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-class LSystemParserImpl implements LSystemParser {
+public class LSystemParserImpl implements LSystemParser {
 
     @Override
     public List<Projection> parse(Stream<String> lines) {

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LSystemParserTest {
 
-    private final LSystemParser parser = LSystemParser.of();
+    private final LSystemParser parser = new LSystemParserImpl();
 
     @ParameterizedTest
     @ArgumentsSource(ProjectionsWithLinesProvider.class)

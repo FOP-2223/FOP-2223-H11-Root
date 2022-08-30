@@ -6,8 +6,4 @@ import java.util.stream.Stream;
 public interface LSystemParser {
 
     List<Projection> parse(Stream<String> lines);
-
-    static LSystemParser of() {
-        return new LSystemParserImpl();
-    }
 }
