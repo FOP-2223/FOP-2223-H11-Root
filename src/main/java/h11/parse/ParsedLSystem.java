@@ -5,10 +5,21 @@ import h11.LSystem;
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * One can utilize this class to
+ * use the {@link List} of {@link Projection} parsed
+ * by the {@link LSystemParser} to implement an {@link LSystem}.
+ */
 class ParsedLSystem implements LSystem<Character> {
 
+    /**
+     * The projections of the L-System this instance represents.
+     */
     private final List<Projection> projections;
 
+    /**
+     * @param projections The projections of the L-System this instance represents.
+     */
     public ParsedLSystem(List<Projection> projections) {
         if (projections.isEmpty()) {
             throw new IllegalArgumentException("Need at least on projection rule");
