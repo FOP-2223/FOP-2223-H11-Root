@@ -1,11 +1,31 @@
 package h11.parse;
 
+/**
+ * Instances of this class are used
+ * to represent the projections parsed by an {@link LSystemParser}.
+ * For example the projection <code>A -> AB</code>
+ * can be represented by
+ * <pre>
+ *     new Projection('A', "AB")
+ * </pre>
+ *
+ * @param source The source of the projection
+ * @param destination The destination of the projection
+ */
 public record Projection(char source, String destination) {
 
+    /**
+     * @param source The source of the projection
+     * @param destination The destination of the projection (may not be empty)
+     */
     public Projection {
         checkDestinationNotEmpty(destination);
     }
 
+    /**
+     * @param source The source of the projection (must be of length 1)
+     * @param destination The destination of the projection (may not be empty)
+     */
     public Projection(String source, String destination) {
         this(getFirstChar(source), destination);
     }
