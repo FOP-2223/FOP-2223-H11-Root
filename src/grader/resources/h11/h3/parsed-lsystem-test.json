@@ -1,0 +1,56 @@
+[ {
+  "projections" : [ {
+    "source" : "J",
+    "destination" : "OOW"
+  } ]
+}, {
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "WRP"
+  }, {
+    "source" : "K",
+    "destination" : "KO"
+  }, {
+    "source" : "M",
+    "destination" : "YZWJ"
+  }, {
+    "source" : "C",
+    "destination" : "ATSO"
+  }, {
+    "source" : "H",
+    "destination" : "V"
+  } ]
+}, {
+  "projections" : [ {
+    "source" : "F",
+    "destination" : "PO"
+  } ]
+}, {
+  "projections" : [ {
+    "source" : "P",
+    "destination" : "G"
+  }, {
+    "source" : "A",
+    "destination" : "ICH"
+  }, {
+    "source" : "B",
+    "destination" : "ZMFC"
+  }, {
+    "source" : "J",
+    "destination" : "SS"
+  }, {
+    "source" : "W",
+    "destination" : "O"
+  }, {
+    "source" : "Z",
+    "destination" : "IKH"
+  }, {
+    "source" : "N",
+    "destination" : "FZO"
+  } ]
+}, {
+  "projections" : [ {
+    "source" : "O",
+    "destination" : "BQWS"
+  } ]
+} ]

@@ -36,6 +36,8 @@ dependencies {
     implementation(libs.annotations)
     implementation(libs.algoutils.student)
     testImplementation(libs.junit.core)
+    "graderImplementation"("org.junit-pioneer:junit-pioneer:1.7.1")
+    "graderImplementation"("com.fasterxml.jackson.core:jackson-databind:2.13.3")
 }
 
 application {
