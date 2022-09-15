@@ -17,6 +17,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class ParsedLSystemTest {
 
+    /**
+     * The {@link LSystem} to test
+     * as implemented by {@link ParsedLSystem}.
+     */
     private LSystem<Character> lSystem;
 
     /**

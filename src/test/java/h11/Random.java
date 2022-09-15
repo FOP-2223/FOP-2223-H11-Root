@@ -40,7 +40,6 @@ public class Random extends java.util.Random {
                 .mapToObj(i -> values[i]);
     }
 
-
     /**
      * Creates a String of the given length where each
      * character is a randomly chosen, uppercase letter

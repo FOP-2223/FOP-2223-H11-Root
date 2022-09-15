@@ -9,10 +9,19 @@ package h11.fibs;
  */
 public record FibonacciPair(int a, int b) {
 
+    /**
+     * Create a {@link FibonacciPair} with
+     * the initial values <code>1, 2</code>.
+     */
     FibonacciPair() {
         this(1, 2);
     }
 
+    /**
+     * Compute the next {@link FibonacciPair} in the sequence.
+     *
+     * @return The next {@link FibonacciPair}.
+     */
     public FibonacciPair next() {
         return new FibonacciPair(b, a+b);
     }
