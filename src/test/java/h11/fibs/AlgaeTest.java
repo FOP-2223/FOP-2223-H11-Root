@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertIterableEquals;
  * The basis of a testcase for the Algae
  * L-System based on Fibonacci numbers.
  */
-abstract class AlgaeTest {
+public abstract class AlgaeTest {
 
     /**
      * The reference {@link FibonacciGenerator} to use.
@@ -36,7 +36,7 @@ abstract class AlgaeTest {
      */
     @ParameterizedTest
     @ValueSource(ints = {5, 10, 20, 30})
-    void testAlgaeGeneratesFibs(int numberOfFibs) {
+    public void testAlgaeGeneratesFibs(int numberOfFibs) {
         var fibs = fibonacciGenerator.generate(numberOfFibs);
         var actual = algaeFibonacciGenerator.generate(numberOfFibs);
         assertIterableEquals(fibs, actual);
