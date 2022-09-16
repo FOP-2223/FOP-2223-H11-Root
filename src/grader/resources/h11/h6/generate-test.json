@@ -1,0 +1,1765 @@
+[ {
+  "seed" : 8470309605870718822,
+  "projections" : [ {
+    "source" : "I",
+    "destination" : "TE"
+  }, {
+    "source" : "Q",
+    "destination" : "QPZ"
+  } ]
+}, {
+  "seed" : -4385214652324350121,
+  "projections" : [ {
+    "source" : "F",
+    "destination" : "IBNJ"
+  }, {
+    "source" : "E",
+    "destination" : "I"
+  }, {
+    "source" : "X",
+    "destination" : "HILB"
+  }, {
+    "source" : "N",
+    "destination" : "PLN"
+  }, {
+    "source" : "C",
+    "destination" : "SLZM"
+  }, {
+    "source" : "V",
+    "destination" : "B"
+  } ]
+}, {
+  "seed" : -3556269083046314442,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "C"
+  }, {
+    "source" : "T",
+    "destination" : "BLZU"
+  }, {
+    "source" : "O",
+    "destination" : "JTD"
+  }, {
+    "source" : "S",
+    "destination" : "N"
+  }, {
+    "source" : "U",
+    "destination" : "ATB"
+  }, {
+    "source" : "Q",
+    "destination" : "TGQB"
+  }, {
+    "source" : "D",
+    "destination" : "U"
+  } ]
+}, {
+  "seed" : 8334036025680870700,
+  "projections" : [ {
+    "source" : "K",
+    "destination" : "KF"
+  }, {
+    "source" : "S",
+    "destination" : "K"
+  }, {
+    "source" : "L",
+    "destination" : "LU"
+  }, {
+    "source" : "N",
+    "destination" : "ZL"
+  } ]
+}, {
+  "seed" : -7199804036982878638,
+  "projections" : [ {
+    "source" : "B",
+    "destination" : "IO"
+  } ]
+}, {
+  "seed" : 1939294201327284556,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "DCY"
+  }, {
+    "source" : "M",
+    "destination" : "YUQ"
+  }, {
+    "source" : "I",
+    "destination" : "P"
+  }, {
+    "source" : "R",
+    "destination" : "GGEP"
+  } ]
+}, {
+  "seed" : 4297833698277722771,
+  "projections" : [ {
+    "source" : "A",
+    "destination" : "T"
+  }, {
+    "source" : "I",
+    "destination" : "SWX"
+  }, {
+    "source" : "R",
+    "destination" : "XE"
+  }, {
+    "source" : "Y",
+    "destination" : "L"
+  }, {
+    "source" : "S",
+    "destination" : "BV"
+  } ]
+}, {
+  "seed" : -977009522870307597,
+  "projections" : [ {
+    "source" : "L",
+    "destination" : "Z"
+  }, {
+    "source" : "P",
+    "destination" : "S"
+  }, {
+    "source" : "O",
+    "destination" : "NX"
+  }, {
+    "source" : "N",
+    "destination" : "GZQ"
+  }, {
+    "source" : "D",
+    "destination" : "F"
+  }, {
+    "source" : "R",
+    "destination" : "INH"
+  }, {
+    "source" : "H",
+    "destination" : "MOOG"
+  }, {
+    "source" : "C",
+    "destination" : "W"
+  }, {
+    "source" : "G",
+    "destination" : "VRP"
+  } ]
+}, {
+  "seed" : -7855163138093887139,
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "LI"
+  }, {
+    "source" : "I",
+    "destination" : "BTT"
+  }, {
+    "source" : "F",
+    "destination" : "CEZA"
+  }, {
+    "source" : "D",
+    "destination" : "RX"
+  }, {
+    "source" : "X",
+    "destination" : "DO"
+  } ]
+}, {
+  "seed" : 7752121379460928962,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "G"
+  }, {
+    "source" : "A",
+    "destination" : "CCO"
+  }, {
+    "source" : "E",
+    "destination" : "CIL"
+  }, {
+    "source" : "B",
+    "destination" : "JXLW"
+  }, {
+    "source" : "P",
+    "destination" : "MHHC"
+  }, {
+    "source" : "O",
+    "destination" : "DSKO"
+  } ]
+}, {
+  "seed" : 1220977576736531385,
+  "projections" : [ {
+    "source" : "P",
+    "destination" : "CC"
+  }, {
+    "source" : "L",
+    "destination" : "YEZR"
+  }, {
+    "source" : "Y",
+    "destination" : "JUW"
+  } ]
+}, {
+  "seed" : 1586880541227757385,
+  "projections" : [ {
+    "source" : "Z",
+    "destination" : "N"
+  }, {
+    "source" : "J",
+    "destination" : "OZU"
+  }, {
+    "source" : "F",
+    "destination" : "XHF"
+  }, {
+    "source" : "S",
+    "destination" : "OQE"
+  }, {
+    "source" : "W",
+    "destination" : "VV"
+  }, {
+    "source" : "B",
+    "destination" : "X"
+  }, {
+    "source" : "E",
+    "destination" : "YHVM"
+  }, {
+    "source" : "Y",
+    "destination" : "F"
+  }, {
+    "source" : "N",
+    "destination" : "HALL"
+  } ]
+}, {
+  "seed" : 411471063055514921,
+  "projections" : [ {
+    "source" : "S",
+    "destination" : "V"
+  }, {
+    "source" : "B",
+    "destination" : "X"
+  }, {
+    "source" : "T",
+    "destination" : "PCAL"
+  } ]
+}, {
+  "seed" : -7747281251163688110,
+  "projections" : [ {
+    "source" : "G",
+    "destination" : "GQZX"
+  }, {
+    "source" : "R",
+    "destination" : "ZJNX"
+  }, {
+    "source" : "B",
+    "destination" : "YP"
+  }, {
+    "source" : "T",
+    "destination" : "H"
+  }, {
+    "source" : "Y",
+    "destination" : "FHTC"
+  }, {
+    "source" : "K",
+    "destination" : "TUT"
+  }, {
+    "source" : "W",
+    "destination" : "G"
+  }, {
+    "source" : "O",
+    "destination" : "SK"
+  }, {
+    "source" : "D",
+    "destination" : "KJ"
+  } ]
+}, {
+  "seed" : 4560750624535826740,
+  "projections" : [ {
+    "source" : "R",
+    "destination" : "KSLV"
+  }, {
+    "source" : "G",
+    "destination" : "OHNO"
+  }, {
+    "source" : "D",
+    "destination" : "XI"
+  }, {
+    "source" : "Z",
+    "destination" : "LMP"
+  }, {
+    "source" : "E",
+    "destination" : "UEJ"
+  } ]
+}, {
+  "seed" : 1891349513762685529,
+  "projections" : [ {
+    "source" : "I",
+    "destination" : "MB"
+  }, {
+    "source" : "N",
+    "destination" : "QS"
+  }, {
+    "source" : "H",
+    "destination" : "U"
+  } ]
+}, {
+  "seed" : 6254526088281099036,
+  "projections" : [ {
+    "source" : "G",
+    "destination" : "A"
+  }, {
+    "source" : "S",
+    "destination" : "P"
+  }, {
+    "source" : "V",
+    "destination" : "GCF"
+  }, {
+    "source" : "T",
+    "destination" : "RZ"
+  } ]
+}, {
+  "seed" : 6423274127405133687,
+  "projections" : [ {
+    "source" : "Z",
+    "destination" : "XZ"
+  }, {
+    "source" : "O",
+    "destination" : "I"
+  } ]
+}, {
+  "seed" : -2325074975210332442,
+  "projections" : [ {
+    "source" : "E",
+    "destination" : "IBF"
+  }, {
+    "source" : "A",
+    "destination" : "YHL"
+  }, {
+    "source" : "R",
+    "destination" : "I"
+  }, {
+    "source" : "Z",
+    "destination" : "PGLS"
+  }, {
+    "source" : "U",
+    "destination" : "LV"
+  }, {
+    "source" : "N",
+    "destination" : "BEP"
+  }, {
+    "source" : "I",
+    "destination" : "Y"
+  }, {
+    "source" : "F",
+    "destination" : "YF"
+  }, {
+    "source" : "B",
+    "destination" : "EKKJ"
+  } ]
+}, {
+  "seed" : 8223071317574441334,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "HZI"
+  }, {
+    "source" : "R",
+    "destination" : "W"
+  }, {
+    "source" : "N",
+    "destination" : "VBJV"
+  }, {
+    "source" : "Q",
+    "destination" : "FT"
+  }, {
+    "source" : "Y",
+    "destination" : "ZNQQ"
+  } ]
+}, {
+  "seed" : 7409964622006680341,
+  "projections" : [ {
+    "source" : "M",
+    "destination" : "Q"
+  }, {
+    "source" : "J",
+    "destination" : "VL"
+  } ]
+}, {
+  "seed" : -3466198627563462024,
+  "projections" : [ {
+    "source" : "K",
+    "destination" : "PL"
+  }, {
+    "source" : "D",
+    "destination" : "AGOO"
+  } ]
+}, {
+  "seed" : -5528174733462911856,
+  "projections" : [ {
+    "source" : "C",
+    "destination" : "D"
+  }, {
+    "source" : "G",
+    "destination" : "BT"
+  }, {
+    "source" : "P",
+    "destination" : "F"
+  }, {
+    "source" : "T",
+    "destination" : "VWJA"
+  }, {
+    "source" : "I",
+    "destination" : "H"
+  }, {
+    "source" : "J",
+    "destination" : "ETE"
+  }, {
+    "source" : "L",
+    "destination" : "F"
+  } ]
+}, {
+  "seed" : 7893716589698826125,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "QJM"
+  }, {
+    "source" : "G",
+    "destination" : "N"
+  } ]
+}, {
+  "seed" : 6501882926659289152,
+  "projections" : [ {
+    "source" : "Z",
+    "destination" : "V"
+  }, {
+    "source" : "N",
+    "destination" : "TJI"
+  }, {
+    "source" : "O",
+    "destination" : "F"
+  } ]
+}, {
+  "seed" : 3334994124176237952,
+  "projections" : [ {
+    "source" : "H",
+    "destination" : "MKA"
+  }, {
+    "source" : "S",
+    "destination" : "INRN"
+  }, {
+    "source" : "Z",
+    "destination" : "OS"
+  } ]
+}, {
+  "seed" : -791037457250000877,
+  "projections" : [ {
+    "source" : "N",
+    "destination" : "D"
+  }, {
+    "source" : "P",
+    "destination" : "FP"
+  }, {
+    "source" : "J",
+    "destination" : "FB"
+  }, {
+    "source" : "E",
+    "destination" : "ABZ"
+  }, {
+    "source" : "W",
+    "destination" : "VOK"
+  }, {
+    "source" : "M",
+    "destination" : "AQKH"
+  } ]
+}, {
+  "seed" : -893576842074499920,
+  "projections" : [ {
+    "source" : "M",
+    "destination" : "ROZ"
+  }, {
+    "source" : "X",
+    "destination" : "Z"
+  }, {
+    "source" : "L",
+    "destination" : "DXS"
+  }, {
+    "source" : "J",
+    "destination" : "RTL"
+  }, {
+    "source" : "C",
+    "destination" : "Y"
+  }, {
+    "source" : "O",
+    "destination" : "CJS"
+  }, {
+    "source" : "A",
+    "destination" : "LB"
+  }, {
+    "source" : "D",
+    "destination" : "FLY"
+  }, {
+    "source" : "I",
+    "destination" : "UO"
+  } ]
+}, {
+  "seed" : 6430264952741625284,
+  "projections" : [ {
+    "source" : "T",
+    "destination" : "GQCB"
+  }, {
+    "source" : "J",
+    "destination" : "RZ"
+  }, {
+    "source" : "L",
+    "destination" : "GLQT"
+  }, {
+    "source" : "K",
+    "destination" : "GWK"
+  }, {
+    "source" : "E",
+    "destination" : "KO"
+  }, {
+    "source" : "C",
+    "destination" : "FY"
+  }, {
+    "source" : "D",
+    "destination" : "AJQF"
+  }, {
+    "source" : "P",
+    "destination" : "AX"
+  } ]
+}, {
+  "seed" : 4391401292906286690,
+  "projections" : [ {
+    "source" : "Y",
+    "destination" : "TJW"
+  }, {
+    "source" : "H",
+    "destination" : "ZBK"
+  } ]
+}, {
+  "seed" : 7946458949239300434,
+  "projections" : [ {
+    "source" : "B",
+    "destination" : "LGQ"
+  }, {
+    "source" : "W",
+    "destination" : "UWWC"
+  } ]
+}, {
+  "seed" : 7765096612978382463,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "YAJ"
+  }, {
+    "source" : "L",
+    "destination" : "P"
+  }, {
+    "source" : "S",
+    "destination" : "G"
+  }, {
+    "source" : "H",
+    "destination" : "B"
+  }, {
+    "source" : "R",
+    "destination" : "WUBO"
+  }, {
+    "source" : "I",
+    "destination" : "NSW"
+  }, {
+    "source" : "V",
+    "destination" : "UZFM"
+  } ]
+}, {
+  "seed" : 8441497006655704734,
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "Q"
+  }, {
+    "source" : "X",
+    "destination" : "BNZL"
+  }, {
+    "source" : "Q",
+    "destination" : "B"
+  }, {
+    "source" : "W",
+    "destination" : "QR"
+  }, {
+    "source" : "K",
+    "destination" : "WFB"
+  }, {
+    "source" : "P",
+    "destination" : "YYV"
+  }, {
+    "source" : "L",
+    "destination" : "U"
+  } ]
+}, {
+  "seed" : -7040097778793955275,
+  "projections" : [ {
+    "source" : "O",
+    "destination" : "BJYL"
+  }, {
+    "source" : "Q",
+    "destination" : "RCD"
+  }, {
+    "source" : "L",
+    "destination" : "YP"
+  }, {
+    "source" : "A",
+    "destination" : "I"
+  }, {
+    "source" : "M",
+    "destination" : "DWO"
+  }, {
+    "source" : "N",
+    "destination" : "JAE"
+  } ]
+}, {
+  "seed" : -6574259061590295793,
+  "projections" : [ {
+    "source" : "G",
+    "destination" : "V"
+  } ]
+}, {
+  "seed" : 3312467848458415814,
+  "projections" : [ {
+    "source" : "H",
+    "destination" : "AN"
+  }, {
+    "source" : "Y",
+    "destination" : "OTFA"
+  } ]
+}, {
+  "seed" : 9144996252118694338,
+  "projections" : [ {
+    "source" : "X",
+    "destination" : "I"
+  }, {
+    "source" : "I",
+    "destination" : "XIXJ"
+  } ]
+}, {
+  "seed" : 8334097962079107727,
+  "projections" : [ {
+    "source" : "Q",
+    "destination" : "FCCF"
+  }, {
+    "source" : "A",
+    "destination" : "VDC"
+  }, {
+    "source" : "W",
+    "destination" : "HNYH"
+  } ]
+}, {
+  "seed" : -808913756004070910,
+  "projections" : [ {
+    "source" : "N",
+    "destination" : "GVZ"
+  } ]
+}, {
+  "seed" : 7265559073717803860,
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "EBSC"
+  }, {
+    "source" : "Z",
+    "destination" : "SS"
+  }, {
+    "source" : "Y",
+    "destination" : "J"
+  }, {
+    "source" : "H",
+    "destination" : "SBLS"
+  }, {
+    "source" : "N",
+    "destination" : "GMNP"
+  }, {
+    "source" : "G",
+    "destination" : "EJ"
+  }, {
+    "source" : "K",
+    "destination" : "I"
+  }, {
+    "source" : "R",
+    "destination" : "UC"
+  } ]
+}, {
+  "seed" : -3609698090097150675,
+  "projections" : [ {
+    "source" : "A",
+    "destination" : "MU"
+  }, {
+    "source" : "C",
+    "destination" : "WYJ"
+  }, {
+    "source" : "U",
+    "destination" : "I"
+  }, {
+    "source" : "G",
+    "destination" : "VJKF"
+  } ]
+}, {
+  "seed" : -4420269462584649253,
+  "projections" : [ {
+    "source" : "U",
+    "destination" : "JH"
+  }, {
+    "source" : "G",
+    "destination" : "BU"
+  }, {
+    "source" : "S",
+    "destination" : "TC"
+  }, {
+    "source" : "J",
+    "destination" : "EQEE"
+  }, {
+    "source" : "T",
+    "destination" : "SYP"
+  } ]
+}, {
+  "seed" : -5478144302008503297,
+  "projections" : [ {
+    "source" : "S",
+    "destination" : "N"
+  }, {
+    "source" : "K",
+    "destination" : "F"
+  }, {
+    "source" : "I",
+    "destination" : "OBM"
+  }, {
+    "source" : "U",
+    "destination" : "T"
+  }, {
+    "source" : "E",
+    "destination" : "DAKM"
+  } ]
+}, {
+  "seed" : -3630974224294765471,
+  "projections" : [ {
+    "source" : "T",
+    "destination" : "R"
+  }, {
+    "source" : "O",
+    "destination" : "OFMQ"
+  }, {
+    "source" : "F",
+    "destination" : "GCO"
+  } ]
+}, {
+  "seed" : -7477477422842091027,
+  "projections" : [ {
+    "source" : "Y",
+    "destination" : "UOZQ"
+  }, {
+    "source" : "H",
+    "destination" : "CIU"
+  }, {
+    "source" : "W",
+    "destination" : "P"
+  }, {
+    "source" : "F",
+    "destination" : "ILG"
+  }, {
+    "source" : "J",
+    "destination" : "PLSV"
+  } ]
+}, {
+  "seed" : 2574843447482287769,
+  "projections" : [ {
+    "source" : "T",
+    "destination" : "OL"
+  }, {
+    "source" : "A",
+    "destination" : "V"
+  }, {
+    "source" : "H",
+    "destination" : "P"
+  }, {
+    "source" : "N",
+    "destination" : "VH"
+  }, {
+    "source" : "B",
+    "destination" : "ZX"
+  }, {
+    "source" : "E",
+    "destination" : "OUYM"
+  }, {
+    "source" : "P",
+    "destination" : "LI"
+  } ]
+}, {
+  "seed" : -2321304333348352167,
+  "projections" : [ {
+    "source" : "Y",
+    "destination" : "EHXR"
+  }, {
+    "source" : "J",
+    "destination" : "SHNS"
+  }, {
+    "source" : "P",
+    "destination" : "AL"
+  }, {
+    "source" : "R",
+    "destination" : "SS"
+  }, {
+    "source" : "W",
+    "destination" : "TSBY"
+  }, {
+    "source" : "V",
+    "destination" : "C"
+  }, {
+    "source" : "T",
+    "destination" : "W"
+  }, {
+    "source" : "E",
+    "destination" : "QVGG"
+  }, {
+    "source" : "X",
+    "destination" : "IIO"
+  } ]
+}, {
+  "seed" : 901986021863115103,
+  "projections" : [ {
+    "source" : "I",
+    "destination" : "ZL"
+  }, {
+    "source" : "X",
+    "destination" : "YZNU"
+  }, {
+    "source" : "D",
+    "destination" : "PTH"
+  }, {
+    "source" : "S",
+    "destination" : "ZAL"
+  }, {
+    "source" : "L",
+    "destination" : "ZCP"
+  }, {
+    "source" : "Y",
+    "destination" : "NHX"
+  }, {
+    "source" : "N",
+    "destination" : "ZJ"
+  }, {
+    "source" : "O",
+    "destination" : "I"
+  } ]
+}, {
+  "seed" : 7226718978843276471,
+  "projections" : [ {
+    "source" : "S",
+    "destination" : "N"
+  }, {
+    "source" : "B",
+    "destination" : "V"
+  }, {
+    "source" : "I",
+    "destination" : "J"
+  }, {
+    "source" : "G",
+    "destination" : "BEI"
+  }, {
+    "source" : "L",
+    "destination" : "EV"
+  } ]
+}, {
+  "seed" : 3935685630576143775,
+  "projections" : [ {
+    "source" : "O",
+    "destination" : "UDL"
+  }, {
+    "source" : "C",
+    "destination" : "HSA"
+  }, {
+    "source" : "P",
+    "destination" : "UP"
+  }, {
+    "source" : "X",
+    "destination" : "XQ"
+  }, {
+    "source" : "R",
+    "destination" : "QQ"
+  }, {
+    "source" : "Y",
+    "destination" : "J"
+  }, {
+    "source" : "H",
+    "destination" : "K"
+  } ]
+}, {
+  "seed" : -8099408436462639918,
+  "projections" : [ {
+    "source" : "D",
+    "destination" : "K"
+  }, {
+    "source" : "B",
+    "destination" : "RP"
+  }, {
+    "source" : "E",
+    "destination" : "B"
+  }, {
+    "source" : "A",
+    "destination" : "BJZM"
+  }, {
+    "source" : "V",
+    "destination" : "Z"
+  }, {
+    "source" : "T",
+    "destination" : "BZ"
+  }, {
+    "source" : "U",
+    "destination" : "D"
+  }, {
+    "source" : "W",
+    "destination" : "GGLS"
+  } ]
+}, {
+  "seed" : 6364317760804635006,
+  "projections" : [ {
+    "source" : "M",
+    "destination" : "VC"
+  } ]
+}, {
+  "seed" : 6413838793197142673,
+  "projections" : [ {
+    "source" : "Y",
+    "destination" : "NALT"
+  }, {
+    "source" : "F",
+    "destination" : "FNS"
+  }, {
+    "source" : "E",
+    "destination" : "GR"
+  }, {
+    "source" : "K",
+    "destination" : "MSCD"
+  }, {
+    "source" : "V",
+    "destination" : "DN"
+  }, {
+    "source" : "J",
+    "destination" : "WER"
+  }, {
+    "source" : "D",
+    "destination" : "MP"
+  }, {
+    "source" : "P",
+    "destination" : "OR"
+  } ]
+}, {
+  "seed" : 2121378002949491264,
+  "projections" : [ {
+    "source" : "H",
+    "destination" : "ABVE"
+  }, {
+    "source" : "T",
+    "destination" : "HAI"
+  }, {
+    "source" : "C",
+    "destination" : "TM"
+  }, {
+    "source" : "X",
+    "destination" : "G"
+  }, {
+    "source" : "Q",
+    "destination" : "ZN"
+  } ]
+}, {
+  "seed" : 1967748940415170452,
+  "projections" : [ {
+    "source" : "G",
+    "destination" : "SYWK"
+  }, {
+    "source" : "P",
+    "destination" : "Z"
+  }, {
+    "source" : "L",
+    "destination" : "R"
+  }, {
+    "source" : "Q",
+    "destination" : "S"
+  }, {
+    "source" : "Y",
+    "destination" : "DJ"
+  }, {
+    "source" : "R",
+    "destination" : "I"
+  }, {
+    "source" : "O",
+    "destination" : "LUP"
+  }, {
+    "source" : "B",
+    "destination" : "MPD"
+  } ]
+}, {
+  "seed" : 1631497451385135445,
+  "projections" : [ {
+    "source" : "N",
+    "destination" : "HLN"
+  } ]
+}, {
+  "seed" : -1043085550752991312,
+  "projections" : [ {
+    "source" : "L",
+    "destination" : "WSQ"
+  }, {
+    "source" : "F",
+    "destination" : "H"
+  }, {
+    "source" : "B",
+    "destination" : "WC"
+  }, {
+    "source" : "X",
+    "destination" : "K"
+  } ]
+}, {
+  "seed" : 239149783578144595,
+  "projections" : [ {
+    "source" : "R",
+    "destination" : "MRYF"
+  }, {
+    "source" : "S",
+    "destination" : "F"
+  }, {
+    "source" : "P",
+    "destination" : "N"
+  }, {
+    "source" : "K",
+    "destination" : "TPB"
+  }, {
+    "source" : "X",
+    "destination" : "ZV"
+  } ]
+}, {
+  "seed" : -7245596944812167337,
+  "projections" : [ {
+    "source" : "E",
+    "destination" : "DXJ"
+  } ]
+}, {
+  "seed" : 5283150297528650045,
+  "projections" : [ {
+    "source" : "D",
+    "destination" : "XSO"
+  }, {
+    "source" : "X",
+    "destination" : "C"
+  }, {
+    "source" : "K",
+    "destination" : "MSR"
+  }, {
+    "source" : "M",
+    "destination" : "R"
+  }, {
+    "source" : "W",
+    "destination" : "H"
+  }, {
+    "source" : "R",
+    "destination" : "Z"
+  }, {
+    "source" : "O",
+    "destination" : "XXPA"
+  } ]
+}, {
+  "seed" : 4992290722240128829,
+  "projections" : [ {
+    "source" : "U",
+    "destination" : "DT"
+  }, {
+    "source" : "S",
+    "destination" : "Y"
+  } ]
+}, {
+  "seed" : -7474234178678267825,
+  "projections" : [ {
+    "source" : "L",
+    "destination" : "YKOL"
+  }, {
+    "source" : "A",
+    "destination" : "WQCJ"
+  }, {
+    "source" : "G",
+    "destination" : "BWO"
+  }, {
+    "source" : "E",
+    "destination" : "Q"
+  }, {
+    "source" : "U",
+    "destination" : "B"
+  }, {
+    "source" : "P",
+    "destination" : "OKTX"
+  } ]
+}, {
+  "seed" : 794370543205543305,
+  "projections" : [ {
+    "source" : "S",
+    "destination" : "DF"
+  }, {
+    "source" : "C",
+    "destination" : "P"
+  }, {
+    "source" : "F",
+    "destination" : "IZNJ"
+  }, {
+    "source" : "D",
+    "destination" : "X"
+  }, {
+    "source" : "W",
+    "destination" : "RHFQ"
+  }, {
+    "source" : "B",
+    "destination" : "CNFW"
+  }, {
+    "source" : "X",
+    "destination" : "N"
+  }, {
+    "source" : "E",
+    "destination" : "U"
+  } ]
+}, {
+  "seed" : 325941992192623784,
+  "projections" : [ {
+    "source" : "H",
+    "destination" : "M"
+  }, {
+    "source" : "R",
+    "destination" : "CDWY"
+  }, {
+    "source" : "F",
+    "destination" : "O"
+  } ]
+}, {
+  "seed" : -7533091022738253424,
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "K"
+  }, {
+    "source" : "R",
+    "destination" : "VJLI"
+  }, {
+    "source" : "J",
+    "destination" : "I"
+  }, {
+    "source" : "G",
+    "destination" : "UA"
+  } ]
+}, {
+  "seed" : 983486472748443446,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "RET"
+  } ]
+}, {
+  "seed" : 3561105677032045983,
+  "projections" : [ {
+    "source" : "T",
+    "destination" : "QDU"
+  }, {
+    "source" : "D",
+    "destination" : "IGRA"
+  }, {
+    "source" : "F",
+    "destination" : "ZO"
+  }, {
+    "source" : "V",
+    "destination" : "VMR"
+  }, {
+    "source" : "U",
+    "destination" : "OK"
+  }, {
+    "source" : "X",
+    "destination" : "QJX"
+  }, {
+    "source" : "Q",
+    "destination" : "XUJX"
+  }, {
+    "source" : "S",
+    "destination" : "LOGD"
+  }, {
+    "source" : "A",
+    "destination" : "OSCO"
+  } ]
+}, {
+  "seed" : -6007549898503110272,
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "GHMS"
+  }, {
+    "source" : "B",
+    "destination" : "Q"
+  }, {
+    "source" : "M",
+    "destination" : "B"
+  }, {
+    "source" : "E",
+    "destination" : "DY"
+  }, {
+    "source" : "U",
+    "destination" : "FL"
+  }, {
+    "source" : "G",
+    "destination" : "HSN"
+  }, {
+    "source" : "A",
+    "destination" : "VQY"
+  } ]
+}, {
+  "seed" : 6498604947846449390,
+  "projections" : [ {
+    "source" : "O",
+    "destination" : "Q"
+  }, {
+    "source" : "G",
+    "destination" : "IFS"
+  }, {
+    "source" : "U",
+    "destination" : "EKZ"
+  }, {
+    "source" : "P",
+    "destination" : "IY"
+  } ]
+}, {
+  "seed" : 4512830367213796708,
+  "projections" : [ {
+    "source" : "K",
+    "destination" : "VUT"
+  }, {
+    "source" : "I",
+    "destination" : "MQ"
+  }, {
+    "source" : "G",
+    "destination" : "MPD"
+  }, {
+    "source" : "O",
+    "destination" : "JB"
+  }, {
+    "source" : "T",
+    "destination" : "GOLL"
+  } ]
+}, {
+  "seed" : -8621713837016634404,
+  "projections" : [ {
+    "source" : "X",
+    "destination" : "FLSV"
+  }, {
+    "source" : "P",
+    "destination" : "J"
+  }, {
+    "source" : "N",
+    "destination" : "VOYB"
+  }, {
+    "source" : "E",
+    "destination" : "TEP"
+  } ]
+}, {
+  "seed" : 8446256255492539641,
+  "projections" : [ {
+    "source" : "H",
+    "destination" : "UY"
+  }, {
+    "source" : "K",
+    "destination" : "Z"
+  }, {
+    "source" : "Y",
+    "destination" : "CLK"
+  }, {
+    "source" : "G",
+    "destination" : "OMLY"
+  }, {
+    "source" : "O",
+    "destination" : "DNW"
+  }, {
+    "source" : "Z",
+    "destination" : "J"
+  }, {
+    "source" : "P",
+    "destination" : "RPV"
+  }, {
+    "source" : "I",
+    "destination" : "SCC"
+  } ]
+}, {
+  "seed" : 8271543392678547986,
+  "projections" : [ {
+    "source" : "V",
+    "destination" : "I"
+  }, {
+    "source" : "T",
+    "destination" : "W"
+  } ]
+}, {
+  "seed" : 2243479501439341978,
+  "projections" : [ {
+    "source" : "P",
+    "destination" : "H"
+  }, {
+    "source" : "S",
+    "destination" : "UAIL"
+  }, {
+    "source" : "N",
+    "destination" : "HGR"
+  }, {
+    "source" : "R",
+    "destination" : "KIW"
+  }, {
+    "source" : "U",
+    "destination" : "NMC"
+  } ]
+}, {
+  "seed" : 1520337861895890332,
+  "projections" : [ {
+    "source" : "L",
+    "destination" : "ER"
+  }, {
+    "source" : "X",
+    "destination" : "WHPN"
+  }, {
+    "source" : "C",
+    "destination" : "SJ"
+  }, {
+    "source" : "Z",
+    "destination" : "KF"
+  }, {
+    "source" : "S",
+    "destination" : "LNMX"
+  }, {
+    "source" : "O",
+    "destination" : "E"
+  }, {
+    "source" : "T",
+    "destination" : "U"
+  }, {
+    "source" : "K",
+    "destination" : "B"
+  } ]
+}, {
+  "seed" : -3330545475998512157,
+  "projections" : [ {
+    "source" : "O",
+    "destination" : "HSN"
+  }, {
+    "source" : "E",
+    "destination" : "ZJ"
+  }, {
+    "source" : "H",
+    "destination" : "IOH"
+  }, {
+    "source" : "D",
+    "destination" : "B"
+  } ]
+}, {
+  "seed" : 1735487131573330072,
+  "projections" : [ {
+    "source" : "I",
+    "destination" : "ZDT"
+  }, {
+    "source" : "W",
+    "destination" : "EYJL"
+  }, {
+    "source" : "H",
+    "destination" : "OKOC"
+  } ]
+}, {
+  "seed" : -5409243570209544733,
+  "projections" : [ {
+    "source" : "O",
+    "destination" : "RV"
+  }, {
+    "source" : "C",
+    "destination" : "TGCD"
+  }, {
+    "source" : "Z",
+    "destination" : "O"
+  }, {
+    "source" : "S",
+    "destination" : "BCM"
+  }, {
+    "source" : "H",
+    "destination" : "TYJF"
+  }, {
+    "source" : "I",
+    "destination" : "Q"
+  } ]
+}, {
+  "seed" : -5831894572197638084,
+  "projections" : [ {
+    "source" : "J",
+    "destination" : "CZGM"
+  }, {
+    "source" : "S",
+    "destination" : "XEA"
+  }, {
+    "source" : "Z",
+    "destination" : "Q"
+  }, {
+    "source" : "A",
+    "destination" : "DD"
+  } ]
+}, {
+  "seed" : 7590797063795579099,
+  "projections" : [ {
+    "source" : "N",
+    "destination" : "QAF"
+  }, {
+    "source" : "K",
+    "destination" : "KE"
+  } ]
+}, {
+  "seed" : 8572102282674159992,
+  "projections" : [ {
+    "source" : "L",
+    "destination" : "DUOO"
+  }, {
+    "source" : "S",
+    "destination" : "LGPG"
+  }, {
+    "source" : "Q",
+    "destination" : "YFU"
+  }, {
+    "source" : "H",
+    "destination" : "MG"
+  } ]
+}, {
+  "seed" : -4317335381095313440,
+  "projections" : [ {
+    "source" : "D",
+    "destination" : "A"
+  }, {
+    "source" : "V",
+    "destination" : "L"
+  }, {
+    "source" : "F",
+    "destination" : "QPVG"
+  }, {
+    "source" : "R",
+    "destination" : "UH"
+  }, {
+    "source" : "U",
+    "destination" : "PM"
+  }, {
+    "source" : "A",
+    "destination" : "YITC"
+  }, {
+    "source" : "S",
+    "destination" : "SJSA"
+  }, {
+    "source" : "H",
+    "destination" : "UX"
+  } ]
+}, {
+  "seed" : 3874943100333622001,
+  "projections" : [ {
+    "source" : "C",
+    "destination" : "I"
+  }, {
+    "source" : "G",
+    "destination" : "IKEY"
+  }, {
+    "source" : "M",
+    "destination" : "H"
+  }, {
+    "source" : "H",
+    "destination" : "I"
+  }, {
+    "source" : "U",
+    "destination" : "E"
+  }, {
+    "source" : "A",
+    "destination" : "BNWQ"
+  } ]
+}, {
+  "seed" : -2284736110219350019,
+  "projections" : [ {
+    "source" : "T",
+    "destination" : "KT"
+  }, {
+    "source" : "X",
+    "destination" : "N"
+  }, {
+    "source" : "O",
+    "destination" : "K"
+  } ]
+}, {
+  "seed" : 5449721547079000709,
+  "projections" : [ {
+    "source" : "B",
+    "destination" : "TBIO"
+  }, {
+    "source" : "L",
+    "destination" : "C"
+  }, {
+    "source" : "P",
+    "destination" : "OFHX"
+  }, {
+    "source" : "E",
+    "destination" : "PV"
+  }, {
+    "source" : "H",
+    "destination" : "CC"
+  }, {
+    "source" : "D",
+    "destination" : "UKS"
+  }, {
+    "source" : "M",
+    "destination" : "O"
+  }, {
+    "source" : "T",
+    "destination" : "YMPQ"
+  } ]
+}, {
+  "seed" : 4908358920319250128,
+  "projections" : [ {
+    "source" : "P",
+    "destination" : "BFTC"
+  }, {
+    "source" : "M",
+    "destination" : "OVEP"
+  } ]
+}, {
+  "seed" : -2859343826058518735,
+  "projections" : [ {
+    "source" : "X",
+    "destination" : "MAH"
+  }, {
+    "source" : "E",
+    "destination" : "CS"
+  }, {
+    "source" : "N",
+    "destination" : "I"
+  }, {
+    "source" : "W",
+    "destination" : "MQE"
+  }, {
+    "source" : "D",
+    "destination" : "IP"
+  }, {
+    "source" : "O",
+    "destination" : "TK"
+  }, {
+    "source" : "C",
+    "destination" : "EEQQ"
+  } ]
+}, {
+  "seed" : 8172687440600897698,
+  "projections" : [ {
+    "source" : "N",
+    "destination" : "ULE"
+  }, {
+    "source" : "B",
+    "destination" : "HL"
+  }, {
+    "source" : "Z",
+    "destination" : "WEQV"
+  }, {
+    "source" : "J",
+    "destination" : "HVX"
+  } ]
+}, {
+  "seed" : -4281850612109237673,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "PHH"
+  }, {
+    "source" : "M",
+    "destination" : "XB"
+  }, {
+    "source" : "S",
+    "destination" : "EMU"
+  }, {
+    "source" : "X",
+    "destination" : "KOK"
+  } ]
+}, {
+  "seed" : -813257461950322983,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "PPQF"
+  }, {
+    "source" : "O",
+    "destination" : "C"
+  }, {
+    "source" : "I",
+    "destination" : "B"
+  }, {
+    "source" : "G",
+    "destination" : "QWG"
+  }, {
+    "source" : "U",
+    "destination" : "JLEO"
+  }, {
+    "source" : "J",
+    "destination" : "LQ"
+  } ]
+}, {
+  "seed" : 211256854078496173,
+  "projections" : [ {
+    "source" : "K",
+    "destination" : "IPV"
+  }, {
+    "source" : "H",
+    "destination" : "HLD"
+  }, {
+    "source" : "Q",
+    "destination" : "BH"
+  }, {
+    "source" : "F",
+    "destination" : "RSKO"
+  }, {
+    "source" : "P",
+    "destination" : "NEA"
+  }, {
+    "source" : "R",
+    "destination" : "SPI"
+  }, {
+    "source" : "C",
+    "destination" : "RM"
+  } ]
+}, {
+  "seed" : 8397249245030427729,
+  "projections" : [ {
+    "source" : "T",
+    "destination" : "U"
+  }, {
+    "source" : "U",
+    "destination" : "DFTA"
+  }, {
+    "source" : "I",
+    "destination" : "GCYF"
+  }, {
+    "source" : "H",
+    "destination" : "EBI"
+  }, {
+    "source" : "R",
+    "destination" : "O"
+  }, {
+    "source" : "V",
+    "destination" : "V"
+  }, {
+    "source" : "M",
+    "destination" : "R"
+  }, {
+    "source" : "B",
+    "destination" : "WTXN"
+  } ]
+}, {
+  "seed" : 2484987563047854128,
+  "projections" : [ {
+    "source" : "U",
+    "destination" : "MOP"
+  }, {
+    "source" : "V",
+    "destination" : "K"
+  } ]
+}, {
+  "seed" : -7345061453882324133,
+  "projections" : [ {
+    "source" : "Q",
+    "destination" : "GC"
+  }, {
+    "source" : "U",
+    "destination" : "J"
+  }, {
+    "source" : "B",
+    "destination" : "N"
+  }, {
+    "source" : "X",
+    "destination" : "S"
+  } ]
+}, {
+  "seed" : 7427766184108110353,
+  "projections" : [ {
+    "source" : "W",
+    "destination" : "KADV"
+  }, {
+    "source" : "L",
+    "destination" : "FM"
+  }, {
+    "source" : "M",
+    "destination" : "YG"
+  }, {
+    "source" : "C",
+    "destination" : "LZ"
+  }, {
+    "source" : "P",
+    "destination" : "OYH"
+  }, {
+    "source" : "S",
+    "destination" : "P"
+  } ]
+}, {
+  "seed" : -5518027101578083586,
+  "projections" : [ {
+    "source" : "F",
+    "destination" : "DJLJ"
+  }, {
+    "source" : "L",
+    "destination" : "ZSD"
+  }, {
+    "source" : "E",
+    "destination" : "TA"
+  }, {
+    "source" : "U",
+    "destination" : "F"
+  } ]
+}, {
+  "seed" : -3631313945562612489,
+  "projections" : [ {
+    "source" : "K",
+    "destination" : "ZYV"
+  }, {
+    "source" : "P",
+    "destination" : "QWMX"
+  }, {
+    "source" : "M",
+    "destination" : "I"
+  }, {
+    "source" : "H",
+    "destination" : "DI"
+  }, {
+    "source" : "I",
+    "destination" : "JQD"
+  } ]
+}, {
+  "seed" : 3679430858969324571,
+  "projections" : [ {
+    "source" : "Z",
+    "destination" : "GYNF"
+  } ]
+}, {
+  "seed" : -9209636191176676456,
+  "projections" : [ {
+    "source" : "P",
+    "destination" : "WPS"
+  }, {
+    "source" : "E",
+    "destination" : "YVF"
+  }, {
+    "source" : "N",
+    "destination" : "LLFD"
+  }, {
+    "source" : "C",
+    "destination" : "VB"
+  }, {
+    "source" : "I",
+    "destination" : "R"
+  }, {
+    "source" : "H",
+    "destination" : "WQOI"
+  }, {
+    "source" : "R",
+    "destination" : "ACH"
+  } ]
+}, {
+  "seed" : -6113853516731573400,
+  "projections" : [ {
+    "source" : "K",
+    "destination" : "L"
+  }, {
+    "source" : "R",
+    "destination" : "NXD"
+  }, {
+    "source" : "Z",
+    "destination" : "OS"
+  }, {
+    "source" : "T",
+    "destination" : "O"
+  }, {
+    "source" : "C",
+    "destination" : "IG"
+  }, {
+    "source" : "O",
+    "destination" : "XOBV"
+  }, {
+    "source" : "W",
+    "destination" : "F"
+  } ]
+} ]

@@ -64,7 +64,7 @@ public class RandomLSystemGenerator {
      * @param src The source of the {@link Projection}
      * @return A random {@link Projection} with the given source.
      */
-    private Projection makeProjection(String src) {
+    public Projection makeProjection(String src) {
         var size = random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE);
         var dest = random.latin(size);
         return new Projection(src, dest);
