@@ -24,7 +24,7 @@ public class LSystemToRandomLinesConverter {
     /**
      * Maximum number of consecutive spaces.
      */
-    private static final int MAX_SPACES_SIZE = 3;
+    private static final int MAX_SPACES_SIZE = 5;
 
     /**
      * Maximum number of characters in a comment
@@ -130,7 +130,7 @@ public class LSystemToRandomLinesConverter {
      *
      * @return The generated String.
      */
-    private String generateSpaces() {
+    public String generateSpaces() {
         var size = random.nextInt(MAX_SPACES_SIZE);
         return random
             .choices(" ", "\t")
