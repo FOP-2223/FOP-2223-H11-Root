@@ -1,7 +1,7 @@
 package h11.providers;
 
 import h11.parse.Projection;
-import h11.Random;
+import h11.AbstractRandom;
 
 import java.util.List;
 import java.util.function.Function;
@@ -24,7 +24,7 @@ public class LSystemToRandomLinesConverter {
     /**
      * Maximum number of consecutive spaces.
      */
-    private static final int MAX_SPACES_SIZE = 3;
+    private static final int MAX_SPACES_SIZE = 5;
 
     /**
      * Maximum number of characters in a comment
@@ -32,14 +32,14 @@ public class LSystemToRandomLinesConverter {
     private static final int MAX_COMMENT_SIZE = 10;
 
     /**
-     * {@link Random} to use.
+     * {@link AbstractRandom} to use.
      */
-    private final Random random;
+    private final AbstractRandom random;
 
     /**
-     * @param random {@link Random} to use.
+     * @param random {@link AbstractRandom} to use.
      */
-    public LSystemToRandomLinesConverter(Random random) {
+    public LSystemToRandomLinesConverter(AbstractRandom random) {
         this.random = random;
     }
 
@@ -130,7 +130,7 @@ public class LSystemToRandomLinesConverter {
      *
      * @return The generated String.
      */
-    private String generateSpaces() {
+    public String generateSpaces() {
         var size = random.nextInt(MAX_SPACES_SIZE);
         return random
             .choices(" ", "\t")

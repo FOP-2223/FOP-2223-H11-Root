@@ -33,6 +33,8 @@ dependencies {
         exclude("org.jetbrains", "annotations")
     }
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    "graderImplementation"("org.junit-pioneer:junit-pioneer:1.7.1")
+    "graderImplementation"("com.fasterxml.jackson.core:jackson-databind:2.13.3")
 }
 
 application {
