@@ -1,15 +1,16 @@
 package h11.h6;
 
-import h11.Random;
+import h11.AbstractRandom;
 import h11.TestCaseUtils;
 import h11.providers.RandomLSystemGenerator;
+import h11.tutor.TutorRandom;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 
 public class GenerateTestCaseGenerator {
 
-    private static final Random random = new Random();
+    private static final AbstractRandom random = new TutorRandom();
 
     private static final RandomLSystemGenerator lSystemGenerator = new RandomLSystemGenerator(random);
 
