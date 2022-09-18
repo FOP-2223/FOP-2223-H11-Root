@@ -1,7 +1,7 @@
 package h11.providers;
 
+import h11.AbstractRandom;
 import h11.parse.Projection;
-import h11.Random;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -26,14 +26,14 @@ public class RandomLSystemGenerator {
     private static final int MAX_PROJECTION_DESTINATION_SIZE = 5;
 
     /**
-     * {@link Random} being used.
+     * {@link AbstractRandom} being used.
      */
-    private final Random random;
+    private final AbstractRandom random;
 
     /**
-     * @param random {@link Random} being used.
+     * @param random {@link AbstractRandom} being used.
      */
-    public RandomLSystemGenerator(Random random) {
+    public RandomLSystemGenerator(AbstractRandom random) {
         this.random = random;
     }
 

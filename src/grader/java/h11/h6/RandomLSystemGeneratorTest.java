@@ -1,13 +1,13 @@
 package h11.h6;
 
-import h11.Random;
 import h11.parse.Projection;
 import h11.providers.RandomLSystemGenerator;
+import h11.tutor.TutorRandom;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RandomLSystemGeneratorTest {
 
@@ -15,7 +15,7 @@ public class RandomLSystemGeneratorTest {
     @JsonClasspathSource("h11/h6/make-projection-test.json")
     @Tag("H6")
     void testMakeProjection(MakeProjectionTestCase testCase) {
-        var random = new Random(testCase.seed());
+        var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var projection = generator.makeProjection(testCase.source());
         var expected = new Projection(testCase.source(), testCase.destination());
@@ -26,7 +26,7 @@ public class RandomLSystemGeneratorTest {
     @JsonClasspathSource("h11/h6/generate-test.json")
     @Tag("H6")
     void testMakeProjection(GenerateTestCase testCase) {
-        var random = new Random(testCase.seed());
+        var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var actual = generator.generate();
         assertEquals(testCase.projections(), actual);

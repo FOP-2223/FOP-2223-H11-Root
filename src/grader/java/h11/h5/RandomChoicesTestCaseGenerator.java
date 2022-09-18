@@ -1,14 +1,15 @@
 package h11.h5;
 
-import h11.Random;
+import h11.AbstractRandom;
 import h11.TestCaseUtils;
+import h11.tutor.TutorRandom;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 
 public class RandomChoicesTestCaseGenerator {
 
-    private static final Random random = new Random();
+    private static final AbstractRandom random = new TutorRandom();
 
     private static final int MAX_INPUT_LENGTH = 50;
 
