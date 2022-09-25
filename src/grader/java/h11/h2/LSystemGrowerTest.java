@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
+import org.tudalgo.algoutils.student.io.PropertyUtils;
 
 import java.util.stream.Stream;
 
@@ -15,7 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LSystemGrowerTest {
 
-    private static final long STREAM_SIZE_CONSIDERED_INFINITE = 1_000_000;
+    private static final long STREAM_SIZE_CONSIDERED_INFINITE =
+        PropertyUtils.getLongProperty("h11/h11-grader.properties", "STREAM_SIZE_CONSIDERED_INFINITE");
 
     @Test
     @Tag("H2")

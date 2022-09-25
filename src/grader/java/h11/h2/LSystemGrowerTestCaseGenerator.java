@@ -5,6 +5,7 @@ import h11.parse.ParsedLSystem;
 import h11.parse.Projection;
 import h11.providers.RandomLSystemGenerator;
 import h11.tutor.TutorRandom;
+import org.tudalgo.algoutils.student.io.PropertyUtils;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -12,7 +13,8 @@ import java.util.List;
 
 public class LSystemGrowerTestCaseGenerator {
 
-    private static final long MAX_GROWTH = 10;
+    private static final long MAX_GROWTH =
+        PropertyUtils.getLongProperty("h11/h11-grader.properties", "MAX_LSYSTEM_GROWTH");
 
     private static final RandomLSystemGenerator generator = new RandomLSystemGenerator(new TutorRandom());
 

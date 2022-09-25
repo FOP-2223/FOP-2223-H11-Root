@@ -43,7 +43,7 @@ public class ParsedLSystemTest {
     void testThat_projectionsOfUnknownDoesNotProject(ParsedLSystemTestCase testCase) {
         var lSystem = new ParsedLSystem(testCase.projections());
 
-        for (char c = '0'; c <= '1'; c++) {
+        for (char c = '0'; c <= '9'; c++) {
             assertEquals(List.of(c), lSystem.project(c).toList());
         }
     }
