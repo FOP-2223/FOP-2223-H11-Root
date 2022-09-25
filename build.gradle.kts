@@ -11,6 +11,7 @@ version = "0.1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 }
 
 submit {
@@ -35,6 +36,9 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
     "graderImplementation"("org.junit-pioneer:junit-pioneer:1.7.1")
     "graderImplementation"("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+
+    implementation("org.tudalgo:algoutils-student:0.1.0-SNAPSHOT")
+    "graderImplementation"("org.tudalgo:algoutils-tutor:0.1.0-SNAPSHOT")
 }
 
 application {
