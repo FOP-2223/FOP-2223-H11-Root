@@ -13,4 +13,14 @@ public class AlgaeFibonacciGeneratorTest extends FibonacciGeneratorTest {
     protected AlgaeFibonacciGeneratorTest() {
         super(new AlgaeFibonacciGenerator(ALGAE_GROWER));
     }
+
+    @Override
+    public void testThat_initialIsCorrect(int numberOfFibs) {
+        super.testThat_initialIsCorrect(numberOfFibs);
+    }
+
+    @Override
+    public void testThat_fibsAreCorrect(int numberOfFibs) {
+        super.testThat_fibsAreCorrect(numberOfFibs);
+    }
 }
