@@ -5,10 +5,11 @@ import h11.parse.LSystemParserImpl;
 import h11.parse.Projection;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.tudalgo.algoutils.tutor.general.test.Assertions2;
+import org.tudalgo.algoutils.tutor.general.test.Context;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import java.util.stream.Stream;
 
 public class LSystemParserTest {
 
@@ -16,7 +17,7 @@ public class LSystemParserTest {
 
     @Test
     @Tag("H3")
-    void testThat_parserParsesProjections() {
+    void testThat_parserParsesProjections() throws NoSuchMethodException {
         assertParser(
             List.of(
                 "A -> AB",
@@ -30,7 +31,7 @@ public class LSystemParserTest {
 
     @Test
     @Tag("H3")
-    void testThat_parserIgnoresInlineCommentsAndWhitespace() {
+    void testThat_parserIgnoresInlineCommentsAndWhitespace() throws NoSuchMethodException {
         assertParser(
             List.of(
                 "   A     ->   AB # aiwdjaw awpdijawid a ",
@@ -44,7 +45,7 @@ public class LSystemParserTest {
 
     @Test
     @Tag("H3")
-    void testThat_parserIgnoresLinesWithCommentsAndEmptyLines() {
+    void testThat_parserIgnoresLinesWithCommentsAndEmptyLines() throws NoSuchMethodException {
         assertParser(
             List.of(
                 "   # auiwoda aiwdjiawd aiwodj",
@@ -63,8 +64,15 @@ public class LSystemParserTest {
             ));
     }
 
-    private void assertParser(List<String> lines, List<Projection> projections) {
+    private void assertParser(List<String> lines, List<Projection> projections) throws NoSuchMethodException {
         var actual = parser.parse(lines.stream());
-        assertIterableEquals(projections, actual);
+        Assertions2.assertEquals(projections, actual, getContext(), result ->
+            "The L-System was not parsed correctly");
+    }
+
+    private Context getContext() throws NoSuchMethodException {
+        return Assertions2.contextBuilder()
+            .subject(LSystemParserImpl.class.getMethod("parse", Stream.class))
+            .build();
     }
 }

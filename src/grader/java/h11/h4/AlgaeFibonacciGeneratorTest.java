@@ -5,6 +5,8 @@ import h11.LSystemGrower;
 import h11.fibs.AlgaeFibonacciGenerator;
 import h11.tutor.TutorAlgae;
 import h11.tutor.TutorLSystemGrower;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class AlgaeFibonacciGeneratorTest extends FibonacciGeneratorTest {
 
@@ -14,13 +16,17 @@ public class AlgaeFibonacciGeneratorTest extends FibonacciGeneratorTest {
         super(new AlgaeFibonacciGenerator(ALGAE_GROWER));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {2, 4, 8, 16})
     @Override
-    public void testThat_initialIsCorrect(int numberOfFibs) {
+    public void testThat_initialIsCorrect(int numberOfFibs) throws NoSuchMethodException {
         super.testThat_initialIsCorrect(numberOfFibs);
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {2, 4, 8, 16})
     @Override
-    public void testThat_fibsAreCorrect(int numberOfFibs) {
+    public void testThat_fibsAreCorrect(int numberOfFibs) throws NoSuchMethodException {
         super.testThat_fibsAreCorrect(numberOfFibs);
     }
 }

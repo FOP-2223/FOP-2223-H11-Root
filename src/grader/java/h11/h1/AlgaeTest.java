@@ -3,11 +3,12 @@ package h11.h1;
 import h11.Algae;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.tudalgo.algoutils.tutor.general.test.Assertions2;
 
 import java.util.List;
 
-import static h11.Algae.Variable.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static h11.Algae.Variable.A;
+import static h11.Algae.Variable.B;
 
 public class AlgaeTest {
 
@@ -15,22 +16,37 @@ public class AlgaeTest {
 
     @Test
     @Tag("H1")
-    void testThat_aIsAxiom() {
-        assertEquals(A, algae.getAxiom());
+    void testThat_aIsAxiom() throws Exception {
+        var context = Assertions2
+            .contextBuilder()
+            .subject(Algae.class.getMethod("getAxiom"))
+            .build();
+
+        Assertions2.assertEquals(A, algae.getAxiom(), context, result ->
+            "`A` was not returned as the axiom");
     }
 
     @Test
     @Tag("H1")
-    void testProjectOfA() {
-        var actual = algae.project(A).toList();
-        assertEquals(List.of(A, B), actual);
+    void testProjectOfA() throws NoSuchMethodException {
+        assertProject(List.of(A, B), A);
     }
 
     @Test
     @Tag("H1")
-    void testProjectOfB() {
-        var actual = algae.project(B).toList();
-        assertEquals(List.of(A), actual);
+    void testProjectOfB() throws NoSuchMethodException {
+        assertProject(List.of(A), B);
     }
 
+    private void assertProject(List<Algae.Variable> expected, Algae.Variable variable) throws NoSuchMethodException {
+        var context = Assertions2
+            .contextBuilder()
+            .subject(Algae.class.getMethod("project", Algae.Variable.class))
+            .property("v", variable)
+            .build();
+
+        var actual = algae.project(variable).toList();
+        Assertions2.assertEquals(expected, actual, context, result ->
+            String.format("`%s` was not projected correctly", variable));
+    }
 }

@@ -1,18 +1,16 @@
 package h11.h2;
 
-import h11.LSystem;
-import h11.LSystemGrowerImpl;
-import h11.StringUtils;
+import h11.*;
 import h11.tutor.parse.TutorParsedLSystem;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
 import org.tudalgo.algoutils.student.io.PropertyUtils;
+import org.tudalgo.algoutils.tutor.general.test.Assertions2;
+import org.tudalgo.algoutils.tutor.general.test.Context;
 
 import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class LSystemGrowerTest {
 
@@ -21,7 +19,7 @@ public class LSystemGrowerTest {
 
     @Test
     @Tag("H2")
-    void testThat_streamIsInfinite() {
+    void testThat_streamIsInfinite() throws NoSuchMethodException {
         var grower = new LSystemGrowerImpl<>(new LSystem<Character>() {
             @Override
             public Character getAxiom() {
@@ -39,13 +37,14 @@ public class LSystemGrowerTest {
             .limit(STREAM_SIZE_CONSIDERED_INFINITE)
             .count();
 
-        assertEquals(STREAM_SIZE_CONSIDERED_INFINITE, actual);
+        Assertions2.assertEquals(STREAM_SIZE_CONSIDERED_INFINITE, actual, getContext(), result ->
+            "The returned Stream ended to soon");
     }
 
     @ParameterizedTest
     @JsonClasspathSource("h11/h2/lsystem-grower-test.json")
     @Tag("H2")
-    void testGrow(LSystemGrowerTestCase testCase) {
+    void testGrow(LSystemGrowerTestCase testCase) throws NoSuchMethodException {
         LSystemGrowerImpl<Character> grower = getGrower(testCase);
 
         var actual = grower
@@ -54,7 +53,15 @@ public class LSystemGrowerTest {
             .map(l -> StringUtils.join("", l))
             .toList();
 
-        assertIterableEquals(testCase.growth(), actual);
+        var context = getContext();
+        Assertions2.assertEquals(testCase.growth(), actual, context, result ->
+            "The L-System was not grown correctly");
+    }
+
+    private static Context getContext() throws NoSuchMethodException {
+        return Assertions2.contextBuilder()
+            .subject(LSystemGrowerImpl.class.getMethod("grow"))
+            .build();
     }
 
     private static LSystemGrowerImpl<Character> getGrower(LSystemGrowerTestCase testCase) {
