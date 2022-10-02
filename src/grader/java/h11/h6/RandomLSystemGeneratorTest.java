@@ -7,27 +7,37 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.tudalgo.algoutils.tutor.general.test.Assertions2;
+import org.tudalgo.algoutils.tutor.general.test.Context;
 
 public class RandomLSystemGeneratorTest {
 
     @ParameterizedTest
     @JsonClasspathSource("h11/h6/make-projection-test.json")
     @Tag("H6")
-    void testMakeProjection(MakeProjectionTestCase testCase) {
+    void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
+
         var projection = generator.makeProjection(testCase.source());
         var expected = new Projection(testCase.source(), testCase.destination());
-        assertEquals(expected, projection);
+
+        Assertions2.assertEquals(expected, projection, getMakeProjectionContext(testCase), result ->
+            "The Projection from the given source was not returned correctly");
+    }
+
+    private Context getMakeProjectionContext(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+        return Assertions2.contextBuilder()
+            .subject(RandomLSystemGenerator.class.getMethod("makeProjection", String.class))
+            .property("seed", testCase.seed())
+            .property("source", testCase.source())
+            .build();
     }
 
     @ParameterizedTest
     @ValueSource(ints = { 12, 3, 5, 67, 8, 2, 1 })
     @Tag("H6")
-    void testThat_sourcesAreUnique(int seed) {
+    void testThat_sourcesAreUnique(int seed) throws NoSuchMethodException {
         var random = new TutorRandom(seed);
         var generator = new RandomLSystemGenerator(random);
         var projections = generator.generate();
@@ -39,16 +49,26 @@ public class RandomLSystemGeneratorTest {
             .toList();
 
         var noDuplicateSources = uniqueSources.size() == projections.size();
-        assertTrue(noDuplicateSources);
+        Assertions2.assertTrue(noDuplicateSources, getGenerateContext(seed), result ->
+            "There were duplicate in the sources of the returned L-System");
     }
 
     @ParameterizedTest
     @JsonClasspathSource("h11/h6/generate-test.json")
     @Tag("H6")
-    void testGenerate(GenerateTestCase testCase) {
+    void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var actual = generator.generate();
-        assertEquals(testCase.projections(), actual);
+
+        Assertions2.assertEquals(testCase.projections(), actual, getGenerateContext(testCase.seed()), result ->
+            "The random projections were not returned correctly");
+    }
+
+    private Context getGenerateContext(long seed) throws NoSuchMethodException {
+        return Assertions2.contextBuilder()
+            .subject(RandomLSystemGenerator.class.getMethod("generate"))
+            .property("seed", seed)
+            .build();
     }
 }
