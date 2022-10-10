@@ -3,7 +3,7 @@ package h11.h1;
 import h11.Algae;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
 
 import java.util.List;
 

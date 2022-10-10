@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
 import org.tudalgo.algoutils.student.io.PropertyUtils;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
-import org.tudalgo.algoutils.tutor.general.test.Context;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
+import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.stream.Stream;
 

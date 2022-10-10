@@ -4,8 +4,8 @@ import h11.parse.ParsedLSystem;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
-import org.tudalgo.algoutils.tutor.general.test.Context;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
+import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.List;
 import java.util.stream.Collectors;

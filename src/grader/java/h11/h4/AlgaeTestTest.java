@@ -8,8 +8,8 @@ import org.junit.jupiter.api.function.Executable;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.opentest4j.AssertionFailedError;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
-import org.tudalgo.algoutils.tutor.general.test.Context;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
+import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.ArrayList;
 

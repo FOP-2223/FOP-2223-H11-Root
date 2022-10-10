@@ -38,7 +38,7 @@ dependencies {
     "graderImplementation"("com.fasterxml.jackson.core:jackson-databind:2.13.3")
 
     implementation("org.tudalgo:algoutils-student:0.1.0-SNAPSHOT")
-    "graderImplementation"("org.tudalgo:algoutils-tutor:0.1.0-SNAPSHOT")
+    "graderImplementation"("org.tudalgo:algoutils-tutor:0.1.1-SNAPSHOT")
 }
 
 application {
