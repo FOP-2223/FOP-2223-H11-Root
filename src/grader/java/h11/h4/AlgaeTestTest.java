@@ -71,7 +71,7 @@ public class AlgaeTestTest {
         } catch (AssertionFailedError e) {
             return false;
         } catch (Throwable e) {
-            throw new AssertionFailedError("An unexpected exception was thrown while executing the test", e);
+            throw new AssertionFailedError("An unexpected exception was thrown while executing the test: " + e, e);
         }
     }
 

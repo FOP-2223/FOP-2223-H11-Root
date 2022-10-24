@@ -20,7 +20,7 @@ public class RandomChoicesTestCaseGenerator {
 
     public static void main(String[] args) throws IOException {
         TestCaseUtils.generateTestCases(Paths.get("random-choices-test.json"), () -> {
-            var inputLength = random.nextInt(MAX_INPUT_LENGTH);
+            var inputLength = random.nextInt(1, MAX_INPUT_LENGTH);
             var input = random
                 .ints(inputLength, 1, MAX_ELEMENT_LENGTH)
                 .mapToObj(random::latin)
