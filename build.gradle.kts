@@ -36,6 +36,8 @@ dependencies {
     implementation(libs.annotations)
     implementation(libs.algoutils.student)
     implementation(libs.algoutils.tutor)
+    testImplementation(libs.algoutils.tutor)
+    testImplementation(libs.algoutils.student)
     testImplementation(libs.junit.core)
     testImplementation("org.junit-pioneer:junit-pioneer:1.7.1")
     testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
