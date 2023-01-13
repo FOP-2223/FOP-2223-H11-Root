@@ -1,7 +1,7 @@
 package h11.parse;
 
 import h11.LSystem;
-import h11.LSystemGrower;
+import h11.LSystemGrowerImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -23,7 +23,7 @@ class FractalTreeTest {
 
     @Test
     void testProject() {
-        var grower = LSystemGrower.of(lSystem);
+        var grower = new LSystemGrowerImpl<>(lSystem);
 
         String[] expected = {
             "0",

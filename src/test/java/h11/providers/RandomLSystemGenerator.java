@@ -1,22 +1,50 @@
 package h11.providers;
 
+import h11.AbstractRandom;
 import h11.parse.Projection;
-import h11.Random;
+import org.tudalgo.algoutils.student.io.PropertyUtils;
 
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * To test the LSystemParser this
+ * class can generate random {@link List}s
+ * of {@link Projection}s representing an LSystem.
+ */
 public class RandomLSystemGenerator {
 
-    private static final int MAX_SYSTEM_SIZE = 10;
+    /**
+     * The maximum number of {@link Projection}
+     * in a generated LSystem.
+     */
+    private static final int MAX_SYSTEM_SIZE =
+        PropertyUtils.getIntProperty("h11/h11-generator.properties", "MAX_LSYSTEM_SIZE");
+
+    /**
+     * The maximum size of the destination
+     * in a generated projection.
+     */
     private static final int MAX_PROJECTION_DESTINATION_SIZE = 5;
 
-    private final Random random;
+    /**
+     * {@link AbstractRandom} being used.
+     */
+    private final AbstractRandom random;
 
-    public RandomLSystemGenerator(Random random) {
+    /**
+     * @param random {@link AbstractRandom} being used.
+     */
+    public RandomLSystemGenerator(AbstractRandom random) {
         this.random = random;
     }
 
+    /**
+     * Generate a random LSystem
+     * represented as a {@link List} of {@link Projection}s.
+     *
+     * @return A {@link List} of random {@link Projection}s.
+     */
     public List<Projection> generate() {
         var size = random.nextInt(1, MAX_SYSTEM_SIZE);
         return Stream
@@ -31,8 +59,16 @@ public class RandomLSystemGenerator {
         return random.latin(1);
     }
 
-    private Projection makeProjection(String src) {
-        var dest = random.latin(random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE));
+    /**
+     * Generate a {@link Projection} with
+     * the given source and a random destination.
+     *
+     * @param src The source of the {@link Projection}
+     * @return A random {@link Projection} with the given source.
+     */
+    public Projection makeProjection(String src) {
+        var size = random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE);
+        var dest = random.latin(size);
         return new Projection(src, dest);
     }
 }
