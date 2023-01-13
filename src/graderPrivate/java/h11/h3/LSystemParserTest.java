@@ -5,12 +5,14 @@ import h11.parse.LSystemParserImpl;
 import h11.parse.Projection;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
-import org.tudalgo.algoutils.tutor.general.test.Context;
+import org.sourcegrade.jagr.api.rubric.TestForSubmission;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
+import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.List;
 import java.util.stream.Stream;
 
+@TestForSubmission
 public class LSystemParserTest {
 
     private final LSystemParser parser = new LSystemParserImpl();

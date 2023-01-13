@@ -19,15 +19,15 @@ jagr {
     }
     graders {
         val graderPublic by creating {
-            graderName.set("_name_-Public")
-            rubricProviderName.set("h_id_.H_id__RubricProvider")
+            graderName.set("FOP-2223-H11-Public")
+            rubricProviderName.set("h11.H11_RubricProvider")
             configureDependencies {
                 implementation(libs.algoutils.tutor)
             }
         }
         val graderPrivate by creating {
             parent(graderPublic)
-            graderName.set("_name_-Private")
+            graderName.set("FOP-2223-H11-Private")
         }
     }
 }
@@ -35,9 +35,10 @@ jagr {
 dependencies {
     implementation(libs.annotations)
     implementation(libs.algoutils.student)
+    implementation(libs.algoutils.tutor)
     testImplementation(libs.junit.core)
-    "graderImplementation"("org.junit-pioneer:junit-pioneer:1.7.1")
-    "graderImplementation"("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+    testImplementation("org.junit-pioneer:junit-pioneer:1.7.1")
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
 }
 
 application {

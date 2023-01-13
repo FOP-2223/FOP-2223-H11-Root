@@ -3,13 +3,15 @@ package h11.h1;
 import h11.Algae;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
+import org.sourcegrade.jagr.api.rubric.TestForSubmission;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
 
 import java.util.List;
 
 import static h11.Algae.Variable.A;
 import static h11.Algae.Variable.B;
 
+@TestForSubmission
 public class AlgaeTest {
 
     private final Algae algae = new Algae();

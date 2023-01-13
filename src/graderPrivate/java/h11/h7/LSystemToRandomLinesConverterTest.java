@@ -5,11 +5,13 @@ import h11.tutor.TutorRandom;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
-import org.tudalgo.algoutils.tutor.general.test.Assertions2;
-import org.tudalgo.algoutils.tutor.general.test.Context;
+import org.sourcegrade.jagr.api.rubric.TestForSubmission;
+import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
+import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.List;
 
+@TestForSubmission
 public class LSystemToRandomLinesConverterTest {
 
     @ParameterizedTest

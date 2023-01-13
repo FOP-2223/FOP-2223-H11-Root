@@ -3,7 +3,9 @@ package h11.h4;
 import h11.fibs.FibonacciGeneratorImpl;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.sourcegrade.jagr.api.rubric.TestForSubmission;
 
+@TestForSubmission
 public class FibonacciGeneratorImplTest extends FibonacciGeneratorTest {
 
     protected FibonacciGeneratorImplTest() {

@@ -7,7 +7,9 @@ import h11.tutor.TutorAlgae;
 import h11.tutor.TutorLSystemGrower;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.sourcegrade.jagr.api.rubric.TestForSubmission;
 
+@TestForSubmission
 public class AlgaeFibonacciGeneratorTest extends FibonacciGeneratorTest {
 
     private static final LSystemGrower<Algae.Variable> ALGAE_GROWER = new TutorLSystemGrower<>(new TutorAlgae());
