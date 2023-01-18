@@ -15,7 +15,7 @@ public class GenerateTestCaseGenerator {
     private static final RandomLSystemGenerator lSystemGenerator = new RandomLSystemGenerator(random);
 
     public static void main(String[] args) throws IOException {
-        TestCaseUtils.generateTestCases(Paths.get("generate-test.json"), () -> {
+        TestCaseUtils.generateTestCases(Paths.get("generate-test-inclusive.json"), () -> {
             var seed = random.nextLong();
             random.setSeed(seed);
             var projections = lSystemGenerator.generate();

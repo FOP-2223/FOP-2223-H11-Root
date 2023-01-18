@@ -18,7 +18,7 @@ public class AlgaeTest {
 
     @Test
     @Tag("H1")
-    void testThat_aIsAxiom() throws Exception {
+    public void testThat_aIsAxiom() throws Exception {
         var context = Assertions2
             .contextBuilder()
             .subject(Algae.class.getMethod("getAxiom"))
@@ -30,13 +30,13 @@ public class AlgaeTest {
 
     @Test
     @Tag("H1")
-    void testProjectOfA() throws NoSuchMethodException {
+    public void testProjectOfA() throws NoSuchMethodException {
         assertProject(List.of(A, B), A);
     }
 
     @Test
     @Tag("H1")
-    void testProjectOfB() throws NoSuchMethodException {
+    public void testProjectOfB() throws NoSuchMethodException {
         assertProject(List.of(A), B);
     }
 
@@ -44,7 +44,7 @@ public class AlgaeTest {
         var context = Assertions2
             .contextBuilder()
             .subject(Algae.class.getMethod("project", Algae.Variable.class))
-            .property("v", variable)
+            .add("v", variable)
             .build();
 
         var actual = algae.project(variable).toList();

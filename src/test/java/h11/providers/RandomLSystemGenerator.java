@@ -46,7 +46,7 @@ public class RandomLSystemGenerator {
      * @return A {@link List} of random {@link Projection}s.
      */
     public List<Projection> generate() {
-        var size = random.nextInt(1, MAX_SYSTEM_SIZE);
+        var size = random.nextInt(1, MAX_SYSTEM_SIZE+1);
         return Stream
             .generate(this::generateSrc)
             .distinct()
@@ -67,7 +67,7 @@ public class RandomLSystemGenerator {
      * @return A random {@link Projection} with the given source.
      */
     public Projection makeProjection(String src) {
-        var size = random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE);
+        var size = random.nextInt(1, MAX_PROJECTION_DESTINATION_SIZE+1);
         var dest = random.latin(size);
         return new Projection(src, dest);
     }
