@@ -15,7 +15,7 @@ public class MakeProjectionTestCaseGenerator {
     private static final RandomLSystemGenerator lSystemGenerator = new RandomLSystemGenerator(random);
 
     public static void main(String[] args) throws IOException {
-        TestCaseUtils.generateTestCases(Paths.get("make-projection-test.json"), () -> {
+        TestCaseUtils.generateTestCases(Paths.get("make-projection-test-inclusive.json"), () -> {
             var seed = random.nextLong();
             var source = random.latin(1);
 

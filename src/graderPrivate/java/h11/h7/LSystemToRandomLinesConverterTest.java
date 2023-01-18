@@ -15,9 +15,20 @@ import java.util.List;
 public class LSystemToRandomLinesConverterTest {
 
     @ParameterizedTest
-    @JsonClasspathSource("h11/h7/random-spacing-test.json")
+    @JsonClasspathSource("h11/h7/random-spacing-test-exclusive.json")
     @Tag("H7")
-    public void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
+    public void testRandomSpacingExclusive(RandomSpacesTestCase testCase) throws NoSuchMethodException {
+        testRandomSpacing(testCase);
+    }
+
+    @ParameterizedTest
+    @JsonClasspathSource("h11/h7/random-spacing-test-inclusive.json")
+    @Tag("H7")
+    public void testRandomSpacingInclusive(RandomSpacesTestCase testCase) throws NoSuchMethodException {
+        testRandomSpacing(testCase);
+    }
+
+    private void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         Assertions2.assertEquals(testCase.spaces(), converter.generateSpaces(), getSpacingContext(testCase), result ->
@@ -32,9 +43,20 @@ public class LSystemToRandomLinesConverterTest {
     }
 
     @ParameterizedTest
-    @JsonClasspathSource("h11/h7/lsystem-as-lines-test.json")
+    @JsonClasspathSource("h11/h7/lsystem-as-lines-test-exclusive.json")
     @Tag("H7")
-    public void testLSystemAsLines(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
+    public void testLSystemAsLinesExclusive(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
+        testLSystemAsLines(testCase);
+    }
+
+    @ParameterizedTest
+    @JsonClasspathSource("h11/h7/lsystem-as-lines-test-inclusive.json")
+    @Tag("H7")
+    public void testLSystemAsLinesInclusive(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
+        testLSystemAsLines(testCase);
+    }
+
+    private void testLSystemAsLines(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         var actual = converter.lSystemAsLines(testCase.projections()).toList();

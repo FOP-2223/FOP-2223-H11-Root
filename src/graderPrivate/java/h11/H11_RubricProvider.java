@@ -215,13 +215,16 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H6_1 = Criterion.builder()
         .shortDescription("H11.6.1 | Zufällige Projektionen")
         .grader(Grader.testAwareBuilder()
-            .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testMakeProjection", MakeProjectionTestCase.class)))
+            .requirePass(JUnitTestRef.or(
+                JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testMakeProjectionInclusive", MakeProjectionTestCase.class)),
+                JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testMakeProjectionExclusive", MakeProjectionTestCase.class))
+            ))
             .pointsFailedMin()
             .pointsPassedMax()
             .build())
         .build();
     private static final Criterion H6_2_A = Criterion.builder()
-        .shortDescription("H11.6.2_A | Es gibt keine doppelten Quellen")
+        .shortDescription("H11.6.2.A | Es gibt keine doppelten Quellen")
         .grader(Grader.testAwareBuilder()
             .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testThat_sourcesAreUnique", int.class)))
             .pointsFailedMin()
@@ -229,10 +232,13 @@ public class H11_RubricProvider implements RubricProvider {
             .build())
         .build();
     private static final Criterion H6_2_B = Criterion.builder()
-        .shortDescription("H11.6.2_B | Die L-Systeme werden korrekt generiert")
+        .shortDescription("H11.6.2.B | Die L-Systeme werden korrekt generiert")
         .maxPoints(2)
         .grader(Grader.testAwareBuilder()
-            .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testGenerate", GenerateTestCase.class)))
+            .requirePass(JUnitTestRef.or(
+                JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testGenerateExclusive", GenerateTestCase.class)),
+                JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testGenerateInclusive", GenerateTestCase.class))
+            ))
             .pointsFailedMin()
             .pointsPassedMax()
             .build())
@@ -249,7 +255,10 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H7_1 = Criterion.builder()
         .shortDescription("H11.7.1 | Zufällige Leerzeichen")
         .grader(Grader.testAwareBuilder()
-            .requirePass(JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testRandomSpacing", RandomSpacesTestCase.class)))
+            .requirePass(JUnitTestRef.or(
+                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testRandomSpacingExclusive", RandomSpacesTestCase.class)),
+                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testRandomSpacingInclusive", RandomSpacesTestCase.class))
+            ))
             .pointsFailedMin()
             .pointsPassedMax()
             .build())
@@ -257,7 +266,9 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H7_2 = Criterion.builder()
         .shortDescription("H11.7.2 | Darstellung für das ganze System")
         .grader(Grader.testAwareBuilder()
-            .requirePass(JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLines", LSystemAsLinesTestCase.class)))
+            .requirePass(JUnitTestRef.or(
+                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesExclusive", LSystemAsLinesTestCase.class)),
+                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesInclusive", LSystemAsLinesTestCase.class)) ))
             .pointsFailedMin()
             .pointsPassedMax()
             .build())

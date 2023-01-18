@@ -16,7 +16,7 @@ public class LSystemAsLinesTestCaseGenerator {
     private static final RandomLSystemGenerator lSystemGenerator = new RandomLSystemGenerator(random);
 
     public static void main(String[] args) throws IOException {
-        TestCaseUtils.generateTestCases(Paths.get("lsystem-as-lines-test.json"), () -> {
+        TestCaseUtils.generateTestCases(Paths.get("lsystem-as-lines-test-inclusive.json"), () -> {
             var seed = random.nextLong();
             var projections = lSystemGenerator.generate();
 

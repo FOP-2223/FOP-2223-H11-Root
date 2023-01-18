@@ -11,13 +11,26 @@ import org.sourcegrade.jagr.api.rubric.TestForSubmission;
 import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
 import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
+import java.util.List;
+
 @TestForSubmission
 public class RandomLSystemGeneratorTest {
 
     @ParameterizedTest
-    @JsonClasspathSource("h11/h6/make-projection-test.json")
+    @JsonClasspathSource("h11/h6/make-projection-test-exclusive.json")
     @Tag("H6")
-    public void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+    public void testMakeProjectionExclusive(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+        testMakeProjection(testCase);
+    }
+
+    @ParameterizedTest
+    @JsonClasspathSource("h11/h6/make-projection-test-inclusive.json")
+    @Tag("H6")
+    public void testMakeProjectionInclusive(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+        testMakeProjection(testCase);
+    }
+
+    private void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
 
@@ -56,9 +69,20 @@ public class RandomLSystemGeneratorTest {
     }
 
     @ParameterizedTest
-    @JsonClasspathSource("h11/h6/generate-test.json")
+    @JsonClasspathSource("h11/h6/generate-test-exclusive.json")
     @Tag("H6")
-    public void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
+    public void testGenerateExclusive(GenerateTestCase testCase) throws NoSuchMethodException {
+        testGenerate(testCase);
+    }
+
+    @ParameterizedTest
+    @JsonClasspathSource("h11/h6/generate-test-inclusive.json")
+    @Tag("H6")
+    public void testGenerateInclusive(GenerateTestCase testCase) throws NoSuchMethodException {
+        testGenerate(testCase);
+    }
+
+    private void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var actual = generator.generate();

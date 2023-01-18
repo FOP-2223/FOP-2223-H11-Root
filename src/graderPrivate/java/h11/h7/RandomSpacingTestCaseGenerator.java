@@ -13,7 +13,7 @@ public class RandomSpacingTestCaseGenerator {
     private static final AbstractRandom random = new TutorRandom();
 
     public static void main(String[] args) throws IOException {
-        TestCaseUtils.generateTestCases(Paths.get("random-spacing-test.json"), () -> {
+        TestCaseUtils.generateTestCases(Paths.get("random-spacing-test-inclusive.json"), () -> {
             var seed = random.nextLong();
 
             random.setSeed(seed);
