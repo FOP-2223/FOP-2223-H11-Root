@@ -268,7 +268,8 @@ public class H11_RubricProvider implements RubricProvider {
         .grader(Grader.testAwareBuilder()
             .requirePass(JUnitTestRef.or(
                 JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesExclusive", LSystemAsLinesTestCase.class)),
-                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesInclusive", LSystemAsLinesTestCase.class))))
+                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesInclusive", LSystemAsLinesTestCase.class))
+            ))
             .pointsFailedMin()
             .pointsPassedMax()
             .build())
