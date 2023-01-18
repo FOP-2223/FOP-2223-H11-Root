@@ -27,7 +27,7 @@ public class LSystemToRandomLinesConverterTest {
     private Context getSpacingContext(RandomSpacesTestCase testCase) throws NoSuchMethodException {
         return Assertions2.contextBuilder()
             .subject(LSystemToRandomLinesConverter.class.getMethod("generateSpaces"))
-            .property("seed", testCase.seed())
+            .add("seed", testCase.seed())
             .build();
     }
 
@@ -45,7 +45,7 @@ public class LSystemToRandomLinesConverterTest {
     private Context getLinesContext(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
         return Assertions2.contextBuilder()
             .subject(LSystemToRandomLinesConverter.class.getMethod("lSystemAsLines", List.class))
-            .property("seed", testCase.seed())
+            .add("seed", testCase.seed())
             .build();
     }
 }

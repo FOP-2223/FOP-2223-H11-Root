@@ -44,7 +44,7 @@ public class AlgaeTest {
         var context = Assertions2
             .contextBuilder()
             .subject(Algae.class.getMethod("project", Algae.Variable.class))
-            .property("v", variable)
+            .add("v", variable)
             .build();
 
         var actual = algae.project(variable).toList();

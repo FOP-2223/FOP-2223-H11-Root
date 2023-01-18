@@ -28,7 +28,7 @@ public class RandomTest {
     private Context getChoicesContext(RandomChoicesTestCase testCase) throws NoSuchMethodException {
         return Assertions2.contextBuilder()
             .subject(Random.class.getMethod("choices", Object[].class))
-            .property("seed", testCase.seed())
+            .add("seed", testCase.seed())
             .build();
     }
 
@@ -45,8 +45,8 @@ public class RandomTest {
     private Context getLatinContext(RandomLatinTestCase testCase) throws NoSuchMethodException {
         return Assertions2.contextBuilder()
             .subject(Random.class.getMethod("latin", int.class))
-            .property("seed", testCase.seed())
-            .property("length", testCase.length())
+            .add("seed", testCase.seed())
+            .add("length", testCase.length())
             .build();
     }
 }

@@ -31,8 +31,8 @@ public class RandomLSystemGeneratorTest {
     private Context getMakeProjectionContext(MakeProjectionTestCase testCase) throws NoSuchMethodException {
         return Assertions2.contextBuilder()
             .subject(RandomLSystemGenerator.class.getMethod("makeProjection", String.class))
-            .property("seed", testCase.seed())
-            .property("source", testCase.source())
+            .add("seed", testCase.seed())
+            .add("source", testCase.source())
             .build();
     }
 
@@ -70,7 +70,7 @@ public class RandomLSystemGeneratorTest {
     private Context getGenerateContext(long seed) throws NoSuchMethodException {
         return Assertions2.contextBuilder()
             .subject(RandomLSystemGenerator.class.getMethod("generate"))
-            .property("seed", seed)
+            .add("seed", seed)
             .build();
     }
 }
