@@ -268,7 +268,7 @@ public class H11_RubricProvider implements RubricProvider {
         .grader(Grader.testAwareBuilder()
             .requirePass(JUnitTestRef.or(
                 JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesExclusive", LSystemAsLinesTestCase.class)),
-                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesInclusive", LSystemAsLinesTestCase.class)) ))
+                JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesInclusive", LSystemAsLinesTestCase.class))))
             .pointsFailedMin()
             .pointsPassedMax()
             .build())
@@ -280,7 +280,7 @@ public class H11_RubricProvider implements RubricProvider {
 
     public static final Rubric RUBRIC = Rubric.builder()
         .title("H11 | L-Systeme")
-        .addChildCriteria(H1, H2, H3, H4, H5, H6 , H7)
+        .addChildCriteria(H1, H2, H3, H4, H5, H6, H7)
         .build();
 
     @Override
