@@ -100,7 +100,7 @@ public class LSystemToRandomLinesConverter {
      * @return A {@link Stream} of the generated lines.
      */
     private Stream<String> generateLinesNextToProjection() {
-        var size = random.nextInt(MAX_LINE_NEXT_TO_PROJECTION);
+        var size = random.nextInt(MAX_LINE_NEXT_TO_PROJECTION+1);
         return Stream
             .generate(this::generateLineNextToProjection)
             .limit(size);
@@ -125,7 +125,7 @@ public class LSystemToRandomLinesConverter {
             return "";
         }
 
-        var size = random.nextInt(MAX_COMMENT_SIZE);
+        var size = random.nextInt(MAX_COMMENT_SIZE+1);
         return '#' + generateSpaces() + random.latin(size);
     }
 
@@ -135,7 +135,7 @@ public class LSystemToRandomLinesConverter {
      * @return The generated String.
      */
     public String generateSpaces() {
-        var size = random.nextInt(MAX_SPACES_SIZE);
+        var size = random.nextInt(MAX_SPACES_SIZE+1);
         return random
             .choices(" ", "\t")
             .limit(size)
