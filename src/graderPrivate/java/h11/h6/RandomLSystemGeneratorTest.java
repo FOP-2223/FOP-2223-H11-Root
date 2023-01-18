@@ -17,7 +17,7 @@ public class RandomLSystemGeneratorTest {
     @ParameterizedTest
     @JsonClasspathSource("h11/h6/make-projection-test.json")
     @Tag("H6")
-    void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+    public void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
 
@@ -39,7 +39,7 @@ public class RandomLSystemGeneratorTest {
     @ParameterizedTest
     @ValueSource(ints = { 12, 3, 5, 67, 8, 2, 1 })
     @Tag("H6")
-    void testThat_sourcesAreUnique(int seed) throws NoSuchMethodException {
+    public void testThat_sourcesAreUnique(int seed) throws NoSuchMethodException {
         var random = new TutorRandom(seed);
         var generator = new RandomLSystemGenerator(random);
         var projections = generator.generate();
@@ -58,7 +58,7 @@ public class RandomLSystemGeneratorTest {
     @ParameterizedTest
     @JsonClasspathSource("h11/h6/generate-test.json")
     @Tag("H6")
-    void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
+    public void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var actual = generator.generate();

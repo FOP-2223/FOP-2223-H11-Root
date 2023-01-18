@@ -17,7 +17,7 @@ public class LSystemToRandomLinesConverterTest {
     @ParameterizedTest
     @JsonClasspathSource("h11/h7/random-spacing-test.json")
     @Tag("H7")
-    void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
+    public void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         Assertions2.assertEquals(testCase.spaces(), converter.generateSpaces(), getSpacingContext(testCase), result ->
@@ -34,7 +34,7 @@ public class LSystemToRandomLinesConverterTest {
     @ParameterizedTest
     @JsonClasspathSource("h11/h7/lsystem-as-lines-test.json")
     @Tag("H7")
-    void testLSystemAsLines(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
+    public void testLSystemAsLines(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         var actual = converter.lSystemAsLines(testCase.projections()).toList();
