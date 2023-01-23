@@ -5,6 +5,7 @@ import h11.TestCaseUtils;
 import h11.providers.LSystemToRandomLinesConverter;
 import h11.providers.RandomLSystemGenerator;
 import h11.tutor.TutorRandom;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -15,8 +16,9 @@ public class LSystemAsLinesTestCaseGenerator {
 
     private static final RandomLSystemGenerator lSystemGenerator = new RandomLSystemGenerator(random);
 
-    public static void main(String[] args) throws IOException {
-        TestCaseUtils.generateTestCases(Paths.get("lsystem-as-lines-test-inclusive.json"), () -> {
+    @Test
+    void generate() throws IOException {
+        TestCaseUtils.generateTestCases(Paths.get("lsystem-as-lines-test-exclusive.json"), () -> {
             var seed = random.nextLong();
             var projections = lSystemGenerator.generate();
 
