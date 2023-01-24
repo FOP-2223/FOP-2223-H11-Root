@@ -3,6 +3,7 @@ package h11.h4;
 import h11.fibs.FibonacciGenerator;
 import h11.tutor.fibs.TutorFibonacciGenerator;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
@@ -33,6 +34,18 @@ public abstract class FibonacciGeneratorTest {
         Assertions2.assertEquals(List.of(1, 2), fibs.subList(0, 2), getContext(numberOfFibs), result ->
             "The first two fibonacci numbers were returned incorrectly");
     }
+
+    @Test
+    @Tag("H4")
+    public void testThat_fibsMatchHardcodedValues() throws NoSuchMethodException {
+        var expected = List.of(1, 2, 3, 5, 8, 13, 21);
+        var fibs = fibonacciGenerator.generate(expected.size());
+        Assertions2.assertEquals(expected.size(), fibs.size(), getContext(expected.size()), result ->
+            "The wrong amount of fibonacci numbers was returned");
+        Assertions2.assertEquals(expected, fibs, getContext(expected.size()), result ->
+            "The fibonacci numbers were returned incorrectly");
+    }
+
 
     @ParameterizedTest
     @ValueSource(ints = {2, 4, 8, 16})
