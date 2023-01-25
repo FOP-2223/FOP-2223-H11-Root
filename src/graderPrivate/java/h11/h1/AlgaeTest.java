@@ -10,6 +10,7 @@ import java.util.List;
 
 import static h11.Algae.Variable.A;
 import static h11.Algae.Variable.B;
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
 
 @TestForSubmission
 public class AlgaeTest {
@@ -19,6 +20,8 @@ public class AlgaeTest {
     @Test
     @Tag("H1")
     public void testThat_aIsAxiom() throws Exception {
+        assertNoLoopsUsed(Algae.class, "getAxiom");
+
         var context = Assertions2
             .contextBuilder()
             .subject(Algae.class.getMethod("getAxiom"))
@@ -41,6 +44,8 @@ public class AlgaeTest {
     }
 
     private void assertProject(List<Algae.Variable> expected, Algae.Variable variable) throws NoSuchMethodException {
+        assertNoLoopsUsed(Algae.class, "project");
+
         var context = Assertions2
             .contextBuilder()
             .subject(Algae.class.getMethod("project", Algae.Variable.class))
@@ -51,4 +56,5 @@ public class AlgaeTest {
         Assertions2.assertEquals(expected, actual, context, result ->
             String.format("`%s` was not projected correctly", variable));
     }
+
 }

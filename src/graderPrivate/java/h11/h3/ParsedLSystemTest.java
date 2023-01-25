@@ -11,6 +11,8 @@ import org.tudalgo.algoutils.tutor.general.assertions.Context;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
+
 @TestForSubmission
 public class ParsedLSystemTest {
 
@@ -18,6 +20,7 @@ public class ParsedLSystemTest {
     @JsonClasspathSource("h11/h3/parsed-lsystem-test.json")
     @Tag("H3")
     public void testThat_firstProjectionGivesAxiom(ParsedLSystemTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(ParsedLSystem.class, "getAxiom");
         var lSystem = new ParsedLSystem(testCase.projections());
         var expected = testCase.projections().get(0).source();
         Assertions2.assertEquals(expected, lSystem.getAxiom(), getAxiomContext(), result ->
@@ -34,6 +37,8 @@ public class ParsedLSystemTest {
     @JsonClasspathSource("h11/h3/parsed-lsystem-test.json")
     @Tag("H3")
     public void testThat_projectionsOfKnownProject(ParsedLSystemTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(ParsedLSystem.class, "project");
+
         var lSystem = new ParsedLSystem(testCase.projections());
 
         for (var p : testCase.projections()) {
@@ -51,6 +56,8 @@ public class ParsedLSystemTest {
     @JsonClasspathSource("h11/h3/parsed-lsystem-test.json")
     @Tag("H3")
     public void testThat_projectionsOfUnknownDoesNotProject(ParsedLSystemTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(ParsedLSystem.class, "project");
+
         var lSystem = new ParsedLSystem(testCase.projections());
 
         for (char c = '0'; c <= '9'; c++) {

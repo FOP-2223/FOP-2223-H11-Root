@@ -1,5 +1,6 @@
 package h11.h4;
 
+import h11.fibs.AlgaeTest;
 import h11.fibs.FibonacciGenerator;
 import h11.tutor.fibs.TutorFibonacciGenerator;
 import org.junit.jupiter.api.Tag;
@@ -10,6 +11,8 @@ import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
 import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.List;
+
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
 
 public abstract class FibonacciGeneratorTest {
 
@@ -28,6 +31,7 @@ public abstract class FibonacciGeneratorTest {
     @ValueSource(ints = {2, 4, 8, 16})
     @Tag("H4")
     public void testThat_initialIsCorrect(int numberOfFibs) throws NoSuchMethodException {
+        assertNoLoopsUsed(classToTest, "generate");
         var fibs = fibonacciGenerator.generate(numberOfFibs);
         Assertions2.assertTrue(fibs.size() >= 2, getContext(numberOfFibs), result ->
             "Too few fibonacci numbers were generated, was: "+ fibs.size());
@@ -38,6 +42,7 @@ public abstract class FibonacciGeneratorTest {
     @Test
     @Tag("H4")
     public void testThat_fibsMatchHardcodedValues() throws NoSuchMethodException {
+        assertNoLoopsUsed(classToTest, "generate");
         var expected = List.of(1, 2, 3, 5, 8, 13, 21);
         var fibs = fibonacciGenerator.generate(expected.size());
         Assertions2.assertEquals(expected.size(), fibs.size(), getContext(expected.size()), result ->
@@ -51,6 +56,7 @@ public abstract class FibonacciGeneratorTest {
     @ValueSource(ints = {2, 4, 8, 16})
     @Tag("H4")
     public void testThat_fibsAreCorrect(int numberOfFibs) throws NoSuchMethodException {
+        assertNoLoopsUsed(classToTest, "generate");
         var fibs = fibonacciGenerator.generate(numberOfFibs);
         Assertions2.assertEquals(numberOfFibs, fibs.size(), getContext(numberOfFibs), result ->
             "The wrong amount of fibonacci numbers was returned");

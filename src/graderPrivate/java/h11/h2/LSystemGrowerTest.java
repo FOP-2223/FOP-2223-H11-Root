@@ -13,6 +13,8 @@ import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.stream.Stream;
 
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
+
 @TestForSubmission
 public class LSystemGrowerTest {
 
@@ -22,6 +24,8 @@ public class LSystemGrowerTest {
     @Test
     @Tag("H2")
     public void testThat_streamIsInfinite() throws NoSuchMethodException {
+        assertNoLoopsUsed(LSystemGrowerImpl.class, "grow");
+
         var grower = new LSystemGrowerImpl<>(new LSystem<Character>() {
             @Override
             public Character getAxiom() {
@@ -47,6 +51,8 @@ public class LSystemGrowerTest {
     @JsonClasspathSource("h11/h2/lsystem-grower-test.json")
     @Tag("H2")
     public void testGrow(LSystemGrowerTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(LSystemGrowerImpl.class, "grow");
+
         LSystemGrowerImpl<Character> grower = getGrower(testCase);
 
         var actual = grower

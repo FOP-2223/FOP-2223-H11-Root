@@ -11,7 +11,7 @@ import org.sourcegrade.jagr.api.rubric.TestForSubmission;
 import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
 import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
-import java.util.List;
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
 
 @TestForSubmission
 public class RandomLSystemGeneratorTest {
@@ -31,6 +31,8 @@ public class RandomLSystemGeneratorTest {
     }
 
     private void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(RandomLSystemGenerator.class, "makeProjection");
+
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
 
@@ -53,6 +55,8 @@ public class RandomLSystemGeneratorTest {
     @ValueSource(ints = { 12, 3, 5, 67, 8, 2, 1 })
     @Tag("H6")
     public void testThat_sourcesAreUnique(int seed) throws NoSuchMethodException {
+        assertNoLoopsUsed(RandomLSystemGenerator.class, "generate");
+
         var random = new TutorRandom(seed);
         var generator = new RandomLSystemGenerator(random);
         var projections = generator.generate();
@@ -83,6 +87,8 @@ public class RandomLSystemGeneratorTest {
     }
 
     private void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(RandomLSystemGenerator.class, "generate");
+
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var actual = generator.generate();

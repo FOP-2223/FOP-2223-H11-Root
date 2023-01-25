@@ -11,6 +11,8 @@ import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.List;
 
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
+
 @TestForSubmission
 public class LSystemToRandomLinesConverterTest {
 
@@ -29,6 +31,8 @@ public class LSystemToRandomLinesConverterTest {
     }
 
     private void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(LSystemToRandomLinesConverter.class, "randomSpacing");
+
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         Assertions2.assertEquals(testCase.spaces(), converter.generateSpaces(), getSpacingContext(testCase), result ->
@@ -57,6 +61,8 @@ public class LSystemToRandomLinesConverterTest {
     }
 
     private void testLSystemAsLines(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(LSystemToRandomLinesConverter.class, "lSystemAsLines");
+
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         var actual = converter.lSystemAsLines(testCase.projections()).toList();

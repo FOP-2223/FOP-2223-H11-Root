@@ -8,6 +8,8 @@ import org.sourcegrade.jagr.api.rubric.TestForSubmission;
 import org.tudalgo.algoutils.tutor.general.assertions.Assertions2;
 import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
+
 @TestForSubmission
 public class RandomTest {
 
@@ -15,6 +17,8 @@ public class RandomTest {
     @JsonClasspathSource("h11/h5/random-choices-test.json")
     @Tag("H5")
     public void testChoices(RandomChoicesTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(Random.class, "choices");
+
         var random = new Random(testCase.seed());
         var actual = random
             .choices(testCase.input())
@@ -36,6 +40,8 @@ public class RandomTest {
     @JsonClasspathSource("h11/h5/random-latin-test.json")
     @Tag("H5")
     public void testLatin(RandomLatinTestCase testCase) throws NoSuchMethodException {
+        assertNoLoopsUsed(Random.class, "latin");
+
         var random = new Random(testCase.seed());
         var actual = random.latin(testCase.length());
         Assertions2.assertEquals(testCase.output(), actual, getLatinContext(testCase), result ->

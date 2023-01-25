@@ -14,6 +14,8 @@ import org.tudalgo.algoutils.tutor.general.assertions.Context;
 
 import java.util.ArrayList;
 
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
+
 @TestForSubmission
 public class AlgaeTestTest {
 
@@ -23,12 +25,14 @@ public class AlgaeTestTest {
     @ValueSource(ints = {8, 16, 20, 24, 30})
     @Tag("H4")
     public void testThat_algaeTestAcceptsPositive(int numberOfFibs) throws NoSuchMethodException {
+        assertNoLoopsUsed(AlgaeTest.class, "testAlgaeGeneratesFibs");
         var algaeTest = new MockAlgaeTest(TUTOR_FIBONACCI_GENERATOR);
         Assertions2.assertTrue(testAccepts(() -> algaeTest.testAlgaeGeneratesFibs(numberOfFibs)), getContext(numberOfFibs), result ->
             "The test case did not accept correct input");
     }
 
     private Context getContext(int numberOfFibs) throws NoSuchMethodException {
+        assertNoLoopsUsed(AlgaeTest.class, "testAlgaeGeneratesFibs");
         return Assertions2.contextBuilder()
             .subject(AlgaeTest.class.getMethod("testAlgaeGeneratesFibs", int.class))
             .add("numberOfFibs", numberOfFibs)
@@ -39,6 +43,7 @@ public class AlgaeTestTest {
     @ValueSource(ints = {8, 16, 20, 24, 30})
     @Tag("H4")
     public void testThat_algaeTestRejectsWrongSize(int numberOfFibs) throws NoSuchMethodException {
+        assertNoLoopsUsed(AlgaeTest.class, "testAlgaeGeneratesFibs");
         var algaeTest = new MockAlgaeTest(n ->
             TUTOR_FIBONACCI_GENERATOR.generate(numberOfFibs-1));
         Assertions2.assertFalse(testAccepts(() -> algaeTest.testAlgaeGeneratesFibs(numberOfFibs)), getContext(numberOfFibs), result ->
@@ -49,6 +54,7 @@ public class AlgaeTestTest {
     @ValueSource(ints = {8, 16, 20, 24, 30})
     @Tag("H4")
     public void testThat_algaeTestRejectsWrongValues(int numberOfFibs) throws NoSuchMethodException {
+        assertNoLoopsUsed(AlgaeTest.class, "testAlgaeGeneratesFibs");
         var algaeTest = new MockAlgaeTest(n -> {
             var fibs = new ArrayList<>(TUTOR_FIBONACCI_GENERATOR.generate(numberOfFibs-1));
             fibs.set(fibs.size()-2, 0);

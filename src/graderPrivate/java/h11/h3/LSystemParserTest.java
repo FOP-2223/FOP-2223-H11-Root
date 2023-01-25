@@ -12,6 +12,8 @@ import org.tudalgo.algoutils.tutor.general.assertions.Context;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static h11.NoLoopAssertions.assertNoLoopsUsed;
+
 @TestForSubmission
 public class LSystemParserTest {
 
@@ -67,6 +69,7 @@ public class LSystemParserTest {
     }
 
     private void assertParser(List<String> lines, List<Projection> projections) throws NoSuchMethodException {
+        assertNoLoopsUsed(LSystemParserImpl.class, "parse");
         var actual = parser.parse(lines.stream());
         Assertions2.assertEquals(projections, actual, getContext(), result ->
             "The L-System was not parsed correctly");
