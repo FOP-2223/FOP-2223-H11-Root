@@ -2,6 +2,7 @@ package h11.h3;
 
 import h11.parse.ParsedLSystem;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
 import org.sourcegrade.jagr.api.rubric.TestForSubmission;
@@ -16,11 +17,16 @@ import static h11.NoLoopAssertions.assertNoLoopsUsed;
 @TestForSubmission
 public class ParsedLSystemTest {
 
+    @Test
+    @Tag("H3")
+    public void testNoLoopsInGetAxiomUsed() {
+        assertNoLoopsUsed(ParsedLSystem.class, "getAxiom");
+    }
+
     @ParameterizedTest
     @JsonClasspathSource("h11/h3/parsed-lsystem-test.json")
     @Tag("H3")
     public void testThat_firstProjectionGivesAxiom(ParsedLSystemTestCase testCase) throws NoSuchMethodException {
-        assertNoLoopsUsed(ParsedLSystem.class, "getAxiom");
         var lSystem = new ParsedLSystem(testCase.projections());
         var expected = testCase.projections().get(0).source();
         Assertions2.assertEquals(expected, lSystem.getAxiom(), getAxiomContext(), result ->
@@ -33,12 +39,16 @@ public class ParsedLSystemTest {
             .build();
     }
 
+    @Test
+    @Tag("H3")
+    public void testNoLoopsInProjectUsed() {
+        assertNoLoopsUsed(ParsedLSystem.class, "project");
+    }
+
     @ParameterizedTest
     @JsonClasspathSource("h11/h3/parsed-lsystem-test.json")
     @Tag("H3")
     public void testThat_projectionsOfKnownProject(ParsedLSystemTestCase testCase) throws NoSuchMethodException {
-        assertNoLoopsUsed(ParsedLSystem.class, "project");
-
         var lSystem = new ParsedLSystem(testCase.projections());
 
         for (var p : testCase.projections()) {
@@ -56,8 +66,6 @@ public class ParsedLSystemTest {
     @JsonClasspathSource("h11/h3/parsed-lsystem-test.json")
     @Tag("H3")
     public void testThat_projectionsOfUnknownDoesNotProject(ParsedLSystemTestCase testCase) throws NoSuchMethodException {
-        assertNoLoopsUsed(ParsedLSystem.class, "project");
-
         var lSystem = new ParsedLSystem(testCase.projections());
 
         for (char c = '0'; c <= '9'; c++) {

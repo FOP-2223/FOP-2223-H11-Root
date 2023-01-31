@@ -47,12 +47,16 @@ public class LSystemGrowerTest {
             "The returned Stream ended to soon");
     }
 
+    @Test
+    @Tag("H2")
+    public void testNoLoopsInGrow() {
+        assertNoLoopsUsed(LSystemGrowerImpl.class, "grow");
+    }
+
     @ParameterizedTest
     @JsonClasspathSource("h11/h2/lsystem-grower-test.json")
     @Tag("H2")
     public void testGrow(LSystemGrowerTestCase testCase) throws NoSuchMethodException {
-        assertNoLoopsUsed(LSystemGrowerImpl.class, "grow");
-
         LSystemGrowerImpl<Character> grower = getGrower(testCase);
 
         var actual = grower

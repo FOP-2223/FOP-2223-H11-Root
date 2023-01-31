@@ -57,6 +57,7 @@ public class H11_RubricProvider implements RubricProvider {
         .shortDescription("H11.2.B | Das Wachstum wird korrekt berechnet")
         .maxPoints(2)
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> LSystemGrowerTest.class.getMethod("testNoLoopsInGrow")))
             .requirePass(JUnitTestRef.ofMethod(() -> LSystemGrowerTest.class.getMethod("testGrow", LSystemGrowerTestCase.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -70,6 +71,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H3_1_A = Criterion.builder()
         .shortDescription("H11.3.1.A | Die erste Projektion gibt das Axiom vor")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> ParsedLSystemTest.class.getMethod("testNoLoopsInGetAxiomUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> ParsedLSystemTest.class.getMethod("testThat_firstProjectionGivesAxiom", ParsedLSystemTestCase.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -78,6 +80,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H3_1_B = Criterion.builder()
         .shortDescription("H11.3.1.B | Ist der aktuale Parameter bekannt, wird korrekt projektiert")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> ParsedLSystemTest.class.getMethod("testNoLoopsInProjectUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> ParsedLSystemTest.class.getMethod("testThat_projectionsOfKnownProject", ParsedLSystemTestCase.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -86,6 +89,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H3_1_C = Criterion.builder()
         .shortDescription("H11.3.1.C | Ist der aktuale Parameter nicht bekannt, wird korrekt projektiert")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> ParsedLSystemTest.class.getMethod("testNoLoopsInProjectUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> ParsedLSystemTest.class.getMethod("testThat_projectionsOfUnknownDoesNotProject", ParsedLSystemTestCase.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -176,6 +180,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H4_3_A = Criterion.builder()
         .shortDescription("H11.4.3.A | Der Test ist korrekt implementiert")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> AlgaeTestTest.class.getMethod("testNoLoopsUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> AlgaeTestTest.class.getMethod("testThat_algaeTestAcceptsPositive", int.class)))
             .requirePass(JUnitTestRef.ofMethod(() -> AlgaeTestTest.class.getMethod("testThat_algaeTestRejectsWrongSize", int.class)))
             .requirePass(JUnitTestRef.ofMethod(() -> AlgaeTestTest.class.getMethod("testThat_algaeTestRejectsWrongValues", int.class)))
@@ -195,6 +200,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H5_1 = Criterion.builder()
         .shortDescription("H11.5.1 | Pythons choices")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> RandomTest.class.getMethod("testNoLoopsInChoicesUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> RandomTest.class.getMethod("testChoices", RandomChoicesTestCase.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -204,6 +210,7 @@ public class H11_RubricProvider implements RubricProvider {
         .shortDescription("H11.5.2 | Zufälliges Latein")
         .maxPoints(2)
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> RandomTest.class.getMethod("testNoLoopsInLatinUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> RandomTest.class.getMethod("testLatin", RandomLatinTestCase.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -217,6 +224,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H6_1 = Criterion.builder()
         .shortDescription("H11.6.1 | Zufällige Projektionen")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testNoLoopsInMakeProjectionUsed")))
             .requirePass(JUnitTestRef.or(
                 JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testMakeProjectionInclusive", MakeProjectionTestCase.class)),
                 JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testMakeProjectionExclusive", MakeProjectionTestCase.class))
@@ -228,6 +236,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H6_2_A = Criterion.builder()
         .shortDescription("H11.6.2.A | Es gibt keine doppelten Quellen")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testNoLoopsInGenerateUsed")))
             .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testThat_sourcesAreUnique", int.class)))
             .pointsFailedMin()
             .pointsPassedMax()
@@ -237,6 +246,7 @@ public class H11_RubricProvider implements RubricProvider {
         .shortDescription("H11.6.2.B | Die L-Systeme werden korrekt generiert")
         .maxPoints(2)
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testNoLoopsInGenerateUsed")))
             .requirePass(JUnitTestRef.or(
                 JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testGenerateExclusive", GenerateTestCase.class)),
                 JUnitTestRef.ofMethod(() -> RandomLSystemGeneratorTest.class.getMethod("testGenerateInclusive", GenerateTestCase.class))
@@ -257,6 +267,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H7_1 = Criterion.builder()
         .shortDescription("H11.7.1 | Zufällige Leerzeichen")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testNoLoopsInGenerateSpacesUsed")))
             .requirePass(JUnitTestRef.or(
                 JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testRandomSpacingExclusive", RandomSpacesTestCase.class)),
                 JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testRandomSpacingInclusive", RandomSpacesTestCase.class))
@@ -268,6 +279,7 @@ public class H11_RubricProvider implements RubricProvider {
     private static final Criterion H7_2 = Criterion.builder()
         .shortDescription("H11.7.2 | Darstellung für das ganze System")
         .grader(Grader.testAwareBuilder()
+            .requirePass(JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testNoLoopsInLSystemAsLines")))
             .requirePass(JUnitTestRef.or(
                 JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesExclusive", LSystemAsLinesTestCase.class)),
                 JUnitTestRef.ofMethod(() -> LSystemToRandomLinesConverterTest.class.getMethod("testLSystemAsLinesInclusive", LSystemAsLinesTestCase.class))

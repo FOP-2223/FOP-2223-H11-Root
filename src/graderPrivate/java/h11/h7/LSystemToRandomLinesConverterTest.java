@@ -3,6 +3,7 @@ package h11.h7;
 import h11.providers.LSystemToRandomLinesConverter;
 import h11.tutor.TutorRandom;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
 import org.sourcegrade.jagr.api.rubric.TestForSubmission;
@@ -30,9 +31,13 @@ public class LSystemToRandomLinesConverterTest {
         testRandomSpacing(testCase);
     }
 
-    private void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
-        assertNoLoopsUsed(LSystemToRandomLinesConverter.class, "randomSpacing");
+    @Test
+    @Tag("H7")
+    public void testNoLoopsInGenerateSpacesUsed() {
+        assertNoLoopsUsed(LSystemToRandomLinesConverter.class, "generateSpaces");
+    }
 
+    private void testRandomSpacing(RandomSpacesTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var converter = new LSystemToRandomLinesConverter(random);
         Assertions2.assertEquals(testCase.spaces(), converter.generateSpaces(), getSpacingContext(testCase), result ->
@@ -58,6 +63,12 @@ public class LSystemToRandomLinesConverterTest {
     @Tag("H7")
     public void testLSystemAsLinesInclusive(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {
         testLSystemAsLines(testCase);
+    }
+
+    @Test
+    @Tag("H7")
+    public void testNoLoopsInLSystemAsLines() {
+        assertNoLoopsUsed(LSystemToRandomLinesConverter.class, "lSystemAsLines");
     }
 
     private void testLSystemAsLines(LSystemAsLinesTestCase testCase) throws NoSuchMethodException {

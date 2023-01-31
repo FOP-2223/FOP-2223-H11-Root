@@ -4,6 +4,7 @@ import h11.parse.Projection;
 import h11.providers.RandomLSystemGenerator;
 import h11.tutor.TutorRandom;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junitpioneer.jupiter.json.JsonClasspathSource;
@@ -30,9 +31,13 @@ public class RandomLSystemGeneratorTest {
         testMakeProjection(testCase);
     }
 
-    private void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
+    @Test
+    @Tag("H6")
+    public void testNoLoopsInMakeProjectionUsed() {
         assertNoLoopsUsed(RandomLSystemGenerator.class, "makeProjection");
+    }
 
+    private void testMakeProjection(MakeProjectionTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
 
@@ -55,8 +60,6 @@ public class RandomLSystemGeneratorTest {
     @ValueSource(ints = { 12, 3, 5, 67, 8, 2, 1 })
     @Tag("H6")
     public void testThat_sourcesAreUnique(int seed) throws NoSuchMethodException {
-        assertNoLoopsUsed(RandomLSystemGenerator.class, "generate");
-
         var random = new TutorRandom(seed);
         var generator = new RandomLSystemGenerator(random);
         var projections = generator.generate();
@@ -86,9 +89,13 @@ public class RandomLSystemGeneratorTest {
         testGenerate(testCase);
     }
 
-    private void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
+    @Test
+    @Tag("H6")
+    public void testNoLoopsInGenerateUsed() {
         assertNoLoopsUsed(RandomLSystemGenerator.class, "generate");
+    }
 
+    private void testGenerate(GenerateTestCase testCase) throws NoSuchMethodException {
         var random = new TutorRandom(testCase.seed());
         var generator = new RandomLSystemGenerator(random);
         var actual = generator.generate();

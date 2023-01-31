@@ -1,6 +1,5 @@
 package h11.h4;
 
-import h11.fibs.AlgaeTest;
 import h11.fibs.FibonacciGenerator;
 import h11.tutor.fibs.TutorFibonacciGenerator;
 import org.junit.jupiter.api.Tag;
